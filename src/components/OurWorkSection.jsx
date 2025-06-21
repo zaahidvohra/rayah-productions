@@ -1,37 +1,30 @@
 import React from 'react';
 
-export default function OurWorkSection({ data }) {
-  if (!data) return null;
-
+export default function OurWorkSection({ workData }) {
   return (
-    <section className="py-16 px-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-6 bg-white">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold font-heading text-text-primary mb-4">
-            {data.title}
-          </h2>
-          <p className="text-xl text-accent-dark font-medium mb-6">
-            {data.brief}
-          </p>
-          <p className="text-lg font-body text-text-primary leading-relaxed max-w-3xl mx-auto">
-            {data.description}
-          </p>
+          <h2 className="text-4xl font-bold text-text-primary mb-4">{workData.title}</h2>
+          <p className="text-xl text-gray-600">{workData.brief}</p>
+          <p className="mt-4 text-gray-500 max-w-2xl mx-auto">{workData.description}</p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
-          {data.stats?.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-600 font-medium">
-                {stat.label}
-              </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {workData.stats.map((item, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+              <div className="text-3xl font-bold text-primary mb-2">{item.number}</div>
+              <div className="text-gray-700 font-medium">{item.label}</div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <button className="bg-primary hover:bg-accent-dark text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+            View Full Portfolio
+          </button>
         </div>
       </div>
     </section>
   );
-}   
+}

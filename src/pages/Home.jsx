@@ -24,7 +24,7 @@ export default function Home() {
       <HeroCarousel images={heroImages} />
 
       {/* Slogan Section */}
-      <SloganSection sloganData={sloganData} />
+      <SloganSection data={sloganData} />
 
       {/* Who We Are Section */}
       <TextContainer
@@ -48,7 +48,7 @@ export default function Home() {
       <OurClientsSection clientsData={ourClientsData} />
 
       {/* Featured Services Section */}
-      <FeaturedServicesSection servicesData={featuredServicesData} />
+      <FeaturedServicesSection data={featuredServicesData} />
     </div>
   );
 }
