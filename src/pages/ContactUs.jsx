@@ -1,13 +1,5 @@
-// import React from 'react'
-
-// export default function ContactUs() {
-//   return (
-//     <div>ContactUs</div>
-//   )
-// }
-
-
 import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -22,6 +14,10 @@ const ContactPage = () => {
   const [activeCard, setActiveCard] = useState(0);
 
   useEffect(() => {
+    emailjs.init('iQ5YaXcmSbLQeghWZ');
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setActiveCard((prev) => (prev + 1) % 4);
     }, 3000);
@@ -34,12 +30,66 @@ const ContactPage = () => {
 
   const handleSubmit = async (e) => {
     if (e) e.preventDefault();
+
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.service || !formData.message) {
+      alert('Please fill in all required fields marked with *');
+      return;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    alert('Message sent successfully!');
-    setFormData({ name: '', email: '', phone: '', service: '', eventDate: '', message: '' });
+
+    try {
+      // Prepare email template parameters
+      const emailParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone || 'Not provided',
+        service_type: formData.service,
+        event_date: formData.eventDate || 'Not specified',
+        message: formData.message,
+        submission_date: new Date().toLocaleString('en-IN', {
+          timeZone: 'Asia/Kolkata',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        })
+      };
+
+      const response = await emailjs.send(
+        '1andonlyamit',
+        'template_d028eih',
+        emailParams
+      );
+
+      console.log('Email sent successfully:', response);
+
+      alert('🎉 Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.');
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        eventDate: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      alert('❌ Sorry, there was an error sending your message. Please contact us directly at amit@gmail.com or try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const services = [
@@ -167,7 +217,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <p className="font-body text-sm text-text-body">Email</p>
-                    <p className="font-heading font-semibold text-text-primary">hello@rayahproductions.com</p>
+                    <p className="font-heading font-semibold text-text-primary">amit@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -194,34 +244,30 @@ const ContactPage = () => {
               <div className="pt-6">
                 <p className="font-body text-sm text-text-body mb-4">Follow my work</p>
                 <div className="flex gap-4">
-                  <button className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <a
-                      href="https://www.instagram.com/moin_2896/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
-                    >
-                      <span className="text-white text-lg">📷</span>
-                    </a>
-                  </button>
-                  <button className="w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <a
-                      href="https://www.youtube.com/channel/UCkWn6vJ34Cs05YyYaU_CAaA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
-                    ><span className="text-white text-lg">🎥</span>
-                    </a>
-                  </button>
-                  <button className="w-12 h-12 bg-gradient-to-r from-primary to-accent-dark rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <a
-                      href="https://www.youtube.com/channel/UCkWn6vJ34Cs05YyYaU_CAaA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
-                    ><span className="text-white text-lg">💼</span>
-                    </a>
-                  </button>
+                  <a
+                    href="https://www.instagram.com/moin_2896/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
+                  >
+                    <span className="text-white text-lg">📷</span>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/channel/UCkWn6vJ34Cs05YyYaU_CAaA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
+                  >
+                    <span className="text-white text-lg">🎥</span>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/channel/UCkWn6vJ34Cs05YyYaU_CAaA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
+                  >
+                    <span className="text-white text-lg">💼</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -295,10 +341,10 @@ const ContactPage = () => {
                         required
                       >
                         <option value="">Select a service</option>
-                        <option value="photography">Portrait Photography</option>
-                        <option value="videography">Cinematic Videography</option>
-                        <option value="event">Event Coverage</option>
-                        <option value="commercial">Commercial Production</option>
+                        <option value="Portrait Photography">Portrait Photography</option>
+                        <option value="Cinematic Videography">Cinematic Videography</option>
+                        <option value="Event Coverage">Event Coverage</option>
+                        <option value="Commercial Production">Commercial Production</option>
                       </select>
                     </div>
                   </div>
@@ -348,7 +394,6 @@ const ContactPage = () => {
 
                   <div className="text-center pt-4">
                     <div className="flex items-center gap-2 justify-center text-text-body">
-                      {/* <Clock className="w-4 h-4" /> */}
                       <span className="font-body text-sm">Response within 24 hours</span>
                     </div>
                   </div>
