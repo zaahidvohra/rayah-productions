@@ -195,13 +195,32 @@ const ContactPage = () => {
                 <p className="font-body text-sm text-text-body mb-4">Follow my work</p>
                 <div className="flex gap-4">
                   <button className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <span className="text-white text-lg">📷</span>
+                    <a
+                      href="https://www.instagram.com/moin_2896/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
+                    >
+                      <span className="text-white text-lg">📷</span>
+                    </a>
                   </button>
                   <button className="w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <span className="text-white text-lg">🐦</span>
+                    <a
+                      href="https://www.youtube.com/channel/UCkWn6vJ34Cs05YyYaU_CAaA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
+                    ><span className="text-white text-lg">🎥</span>
+                    </a>
                   </button>
                   <button className="w-12 h-12 bg-gradient-to-r from-primary to-accent-dark rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <span className="text-white text-lg">💼</span>
+                    <a
+                      href="https://www.youtube.com/channel/UCkWn6vJ34Cs05YyYaU_CAaA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
+                    ><span className="text-white text-lg">💼</span>
+                    </a>
                   </button>
                 </div>
               </div>
