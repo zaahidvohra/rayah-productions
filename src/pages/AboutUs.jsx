@@ -1,14 +1,5 @@
-// import React from 'react'
-
-// export default function AboutUs() {
-//   return (
-//     <div>AboutUs</div>
-//   )
-// }
-
-
 import React, { useState, useEffect } from 'react';
-import profileImage from '../Assets/profile.jpeg';
+import profileImage from '../assets/profile.jpeg';
 
 const AboutPage = () => {
   const [isVisible, setIsVisible] = useState(false);
