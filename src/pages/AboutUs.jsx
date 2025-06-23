@@ -217,27 +217,8 @@ const AboutPage = () => {
         </div>
 
         {/* Education & Background */}
-        <div className="grid lg:grid-cols-2 gap-16 mb-20">
-          <div className="bg-white rounded-3xl p-8 shadow-lg border border-accent-light/30">
-            <h3 className="font-heading text-3xl font-bold text-text-primary mb-6 flex items-center gap-3">
-              <span className="text-3xl">🎓</span>
-              Education & Training
-            </h3>
-            <div className="space-y-6">
-              <div className="border-l-4 border-primary pl-6">
-                <h4 className="font-heading font-semibold text-text-primary text-lg">Civil Engineering</h4>
-                <p className="font-body text-text-body">Freelancer</p>
-                <p className="font-body text-sm text-text-body/70">M.U.Patel Technical High School Vallabh Vidyanagar (2011-2014)</p>
-              </div>
-              <div className="border-l-4 border-accent-dark pl-6">
-                <h4 className="font-heading font-semibold text-text-primary text-lg">Diploma</h4>
-                <p className="font-body text-text-body">Film & Video Production, Adobe Photoshop</p>
-                <p className="font-body text-sm text-text-body/70">BBIT Vallabh Vidyanagar (2011-2014)</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-accent-light to-accent-light/50 rounded-3xl p-8">
+        <div className="grid lg:grid-cols-1 gap-16 mb-20 place-items-center">
+          <div className="bg-gradient-to-br from-accent-light to-accent-light/50 rounded-3xl p-8 max-w-xl w-full mx-auto">
             <h3 className="font-heading text-3xl font-bold text-text-primary mb-6 flex items-center gap-3">
               <span className="text-3xl">💡</span>
               My Philosophy
