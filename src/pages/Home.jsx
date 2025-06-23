@@ -19,7 +19,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       {/* Hero Carousel */}
       <HeroCarousel images={heroImages} />
 
@@ -30,7 +30,7 @@ export default function Home() {
       <TextContainer
         title={whoWeAreData.title}
         content={whoWeAreData.content}
-        className="bg-white"
+        className="bg-background"
       />
 
       {/* What We Do Section */}
@@ -38,7 +38,7 @@ export default function Home() {
         title={whatWeDoData.title}
         content={whatWeDoData.content}
         highlights={whatWeDoData.highlights}
-        className="bg-gray-50"
+        className="bg-accent-light"
       />
 
       {/* Our Work Section */}
