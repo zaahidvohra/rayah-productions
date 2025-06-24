@@ -1,10 +1,19 @@
 import React from 'react';
 
 export default function SloganSection({ data }) {
-  if (!data) return null && console.error("Slogan data is missing");
+  if (!data) {
+    console.error("Slogan data is missing");
+    return null;
+  }
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-primary via-primary to-accent-dark text-white relative overflow-hidden">
+    // <section className="py-20 px-6 bg-gradient-to-br from-primary via-primary to-accent-dark text-white relative overflow-hidden">
+    <section
+      className="relative text-white py-20 px-6"
+      style={{
+        background: `linear-gradient(135deg, #A36767 0%, #C89B3C 100%)`
+      }}
+    >
       {/* Decorative background elements */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-light via-opacity-5 to-transparent"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-accent-light opacity-5 rounded-full -translate-x-48 -translate-y-48"></div>

@@ -5,6 +5,7 @@ import MediaGalleryGrid from '../components/MediaGalleryGrid';
 import VideoPlayerGrid from '../components/VideoPlayerGrid';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import CampaignCard from '../components/CampaignCard';
+import SocialMediaPostsGrid from '../components/SocialMediaPostsGrid';
 import { 
   featuredProjects, 
   mediaGallery, 
@@ -15,7 +16,7 @@ import {
 
 export default function Work() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-accent-light">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-accent-dark text-white py-20">
         <div className="container mx-auto px-6">
@@ -66,7 +67,7 @@ export default function Work() {
       </section>
 
       {/* Social Media Grid Gallery */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -87,7 +88,7 @@ export default function Work() {
       </section>
 
       {/* Images Grid - Social Media Posts */}
-      <section className="py-20 px-6 bg-gray-100">
+      <section className="py-20 px-6 bg-accent-light">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -103,36 +104,12 @@ export default function Work() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {Array.from({ length: 24 }, (_, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="relative group cursor-pointer overflow-hidden rounded-lg aspect-square bg-gray-200 hover:shadow-lg transition-all duration-300"
-              >
-                <img
-                  src={`/api/placeholder/300/300?text=Post${index + 1}`}
-                  alt={`Social Media Post ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                    <div className="text-2xl mb-2">🔍</div>
-                    <p className="text-sm">View Post</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <SocialMediaPostsGrid posts={24} />
         </div>
       </section>
 
       {/* Reels & Video Showcase */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -153,7 +130,7 @@ export default function Work() {
       </section>
 
       {/* Before/After Photo Editing */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-accent-light">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -174,7 +151,7 @@ export default function Work() {
       </section>
 
       {/* Brand Campaign Highlights */}
-      <section className="py-20 px-6 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="py-20 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
