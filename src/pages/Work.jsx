@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import FeaturedProjectCard from '../components/FeaturedProjectCard';
-import MediaGalleryGrid from '../components/MediaGalleryGrid';
-import VideoPlayerGrid from '../components/VideoPlayerGrid';
-import BeforeAfterSlider from '../components/BeforeAfterSlider';
-import CampaignCard from '../components/CampaignCard';
-import SocialMediaPostsGrid from '../components/SocialMediaPostsGrid';
+import FeaturedProjectCard from '../components/workComponent/FeaturedProjectCard';
+import MediaGalleryGrid from '../components/workComponent/MediaGalleryGrid';
+import VideoPlayerGrid from '../components/workComponent/VideoPlayerGrid';
+import BeforeAfterSlider from '../components/workComponent/BeforeAfterSlider';
+import CampaignCard from '../components/workComponent/CampaignCard';
+import SocialMediaPostsGrid from '../components/workComponent/SocialMediaPostsGrid';
 import { 
   featuredProjects, 
   mediaGallery, 

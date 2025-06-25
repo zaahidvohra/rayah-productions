@@ -1,10 +1,10 @@
 import React from "react";
-import HeroCarousel from "../components/HeroCarousel";
-import SloganSection from "../components/SloganSection";
+import HeroCarousel from "../components/homeComponent/HeroCarousel";
+import SloganSection from "../components/homeComponent/SloganSection";
 import TextContainer from "../components/TextContainer";
-import OurWorkSection from "../components/OurWorkSection";
-import OurClientsSection from "../components/OurClientsSection";
-import FeaturedServicesSection from "../components/FeaturedServicesSection";
+import OurWorkSection from "../components/homeComponent/OurWorkSection";
+import OurClientsSection from "../components/homeComponent/OurClientsSection";
+import FeaturedServicesSection from "../components/homeComponent/FeaturedServicesSection";
 
 // Import data
 import { heroImages } from "../data/heroData";
