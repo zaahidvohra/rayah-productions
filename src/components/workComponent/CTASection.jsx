@@ -1,6 +1,6 @@
 // CTASection.jsx
 import React from 'react';
-import { ctaData } from '../../data/ServicesData';
+import { ctaData } from '../../data/workData';
 
 const CTASection = ({ onStartProjectClick, onScheduleConsultationClick }) => {
   return (

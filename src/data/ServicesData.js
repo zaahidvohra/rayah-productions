@@ -132,3 +132,12 @@ export const processData = [
         description: "Fine-tuning content and delivering results that exceed expectations."
     }
 ];
+
+export const ctaData = {
+    title: "Ready to Elevate Your Brand?",
+    description: "Let's create something extraordinary together. Get in touch to discuss your project and receive a custom quote.",
+    buttons: {
+        primary: "Start Your Project",
+        secondary: "Schedule Consultation"
+    }
+};

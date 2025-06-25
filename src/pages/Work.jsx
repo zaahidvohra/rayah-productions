@@ -6,6 +6,7 @@ import VideoPlayerGrid from '../components/workComponent/VideoPlayerGrid';
 import BeforeAfterSlider from '../components/workComponent/BeforeAfterSlider';
 import CampaignCard from '../components/workComponent/CampaignCard';
 import SocialMediaPostsGrid from '../components/workComponent/SocialMediaPostsGrid';
+import CTASection from '../components/workComponent/CTASection';
 import { 
   featuredProjects, 
   mediaGallery, 
@@ -172,7 +173,7 @@ export default function Work() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-6 bg-gradient-to-r from-primary to-accent-dark text-white">
+      {/* <section className="py-20 px-6 bg-gradient-to-r from-primary to-accent-dark text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -195,7 +196,8 @@ export default function Work() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+        <CTASection />
     </div>
   );
 }

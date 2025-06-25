@@ -188,3 +188,12 @@ export const campaignData = [
     samples: ["/api/placeholder/100/100", "/api/placeholder/100/100", "/api/placeholder/100/100", "/api/placeholder/100/100", "/api/placeholder/100/100"]
   }
 ];
+
+export const ctaData = {
+    title: "Ready to Create Something Amazing?",
+    description: "Let's collaborate on your next project and bring your vision to life.",
+    buttons: {
+        primary: "Start a Project",
+        secondary: "View All Work"
+    }
+};
