@@ -30,36 +30,112 @@ export const ourClientsData = {
   title: "Our Clients",
   subtitle: "Trusted by brands and individuals who value quality",
   clients: [
-    { name: "Tech Innovations Ltd.", logo: "🏢", testimonial: "Exceptional quality and professionalism" },
-    { name: "Wedding Bells Co.", logo: "💍", testimonial: "Captured our special day perfectly" },
-    { name: "Fashion Forward", logo: "👗", testimonial: "Creative vision brought our brand to life" },
-    { name: "Corporate Solutions", logo: "🏭", testimonial: "Professional and reliable service" },
-    { name: "Event Masters", logo: "🎉", testimonial: "Outstanding event coverage" },
-    { name: "Startup Hub", logo: "🚀", testimonial: "Helped us tell our story effectively" }
-  ]
-};
-
-export const featuredServicesData = {
-  title: "Featured Services",
-  subtitle: "Specialized solutions for your creative needs",
-  services: [
     {
-      icon: "📸",
-      title: "Wedding Photography",
-      description: "Capturing your special day with artistic excellence and emotional depth",
-      features: ["Pre-wedding shoots", "Ceremony coverage", "Reception photography", "Photo editing"]
+      name: "Tech Innovations Ltd.",
+      logo: ""
     },
     {
-      icon: "🎬",
-      title: "Commercial Videography",
-      description: "Professional video content that elevates your brand and engages your audience",
-      features: ["Corporate videos", "Product demos", "Marketing content", "Brand storytelling"]
+      name: "Wedding Bells Co.",
+      logo: ""
     },
     {
-      icon: "🎭",
-      title: "Event Coverage",
-      description: "Comprehensive documentation of your events with cinematic quality",
-      features: ["Live streaming", "Multi-camera setup", "Drone footage", "Same-day highlights"]
+      name: "Fashion Forward",
+      logo: ""
+    },
+    {
+      name: "Corporate Solutions",
+      logo: ""
+    },
+    {
+      name: "Event Masters",
+      logo: ""
+    },
+    {
+      name: "Startup Hub",
+      logo: ""
     }
   ]
 };
+
+
+export const featuredServicesData = {
+  title: "Services That Scale",
+  subtitle: "From startup dreams to enterprise schemes, we've got the tools to make it happen.",
+  ctaText: "Ready to bring your vision to life? Let's discuss how we can create something extraordinary together.",
+  ctaButton: "Get Started Today",
+  services: [
+    {
+      icon: '📸',
+      title: "Brand Identity",
+      tagline: "Bold, Memorable, You.",
+      description: "We craft identities that stick and speak your brand’s truth.",
+      category: "Design",
+      features: ["Logo & Visuals", "Style Guide", "Typography System"],
+    },
+    {
+      icon: '🎬',
+      title: "Full-stack Development",
+      tagline: "Fast, scalable, and future-ready.",
+      description: "From MVP to full-scale apps with robust backend integration.",
+      category: "Development",
+      features: ["React + Node", "REST APIs", "Firebase / SQL"],
+    },
+    {
+      icon: '📸',
+      title: "Brand Identity",
+      tagline: "Bold, Memorable, You.",
+      description: "We craft identities that stick and speak your brand’s truth.",
+      category: "Design",
+      features: ["Logo & Visuals", "Style Guide", "Typography System"],
+    },
+    {
+      icon: '🎬',
+      title: "Full-stack Development",
+      tagline: "Fast, scalable, and future-ready.",
+      description: "From MVP to full-scale apps with robust backend integration.",
+      category: "Development",
+      features: ["React + Node", "REST APIs", "Firebase / SQL"],
+    },
+    {
+      icon: '📸',
+      title: "Brand Identity",
+      tagline: "Bold, Memorable, You.",
+      description: "We craft identities that stick and speak your brand’s truth.",
+      category: "Design",
+      features: ["Logo & Visuals", "Style Guide", "Typography System"],
+    },
+    {
+      icon: '🎬',
+      title: "Full-stack Development",
+      tagline: "Fast, scalable, and future-ready.",
+      description: "From MVP to full-scale apps with robust backend integration.",
+      category: "Development",
+      features: ["React + Node", "REST APIs", "Firebase / SQL"],
+    },
+  ],
+};
+
+export const filters = ["All", "Design", "Development"];
+
+export const testimonials = [
+  {
+    quote: "They transformed our startup from unknown to unstoppable. The results speak for themselves.",
+    name: "Sarah Chen",
+    company: "TechFlow",
+    rating: 5
+  },
+  {
+    quote: "Finally, a team that gets our culture and market. Our sales increased 300% in 6 months.",
+    name: "Raj Patel",
+    company: "Spice Route Foods",
+    rating: 5
+  },
+  {
+    quote: "Creative, strategic, and results-driven. They're not just vendors, they're partners.",
+    name: "Maria Rodriguez",
+    company: "Bright Future Consulting",
+    rating: 5
+  }
+
+]
+

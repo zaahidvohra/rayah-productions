@@ -1,91 +1,94 @@
-import React from 'react';
+import React from "react";
 
-export default function FeaturedServicesSection({ data }) {
+export default function FeaturedServicesSection({ data, filters, activeFilter, setActiveFilter }) {
   if (!data) return null;
 
+  const filteredServices = data.services?.filter(
+    (service) => activeFilter === "All" || service.category === activeFilter
+  ) || [];
+
   return (
-    <section className="py-20 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-heading text-text-primary mb-6">
-            {data.title}
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-text-primary">
+            {data.title.split(" ").map((word, i) =>
+              i === data.title.split(" ").length - 1 ? (
+                <span key={i} className="text-primary">{` ${word}`}</span>
+              ) : (
+                ` ${word}`
+              )
+            )}
           </h2>
-          <div className="flex items-center justify-center mb-6">
-            <div className="h-1 w-20 bg-primary rounded-full"></div>
-            <div className="h-2 w-2 bg-accent-dark rounded-full mx-4"></div>
-            <div className="h-1 w-20 bg-primary rounded-full"></div>
-          </div>
-          <p className="text-xl text-text-primary opacity-80 max-w-2xl mx-auto">
-            {data.subtitle}
-          </p>
+          <p className="text-xl text-text-body max-w-2xl mx-auto">{data.subtitle}</p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {data.services?.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 border-t-4 border-primary group relative overflow-hidden"
-            >
-              {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-light opacity-10 rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500"></div>
+        {/* Filters */}
+        {filters?.length > 0 && (
+          <div className="flex justify-center mb-12">
+            <div className="flex bg-secondary rounded-lg p-1 shadow-inner">
+              {filters.map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => setActiveFilter(filter)}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                    activeFilter === filter
+                      ? "bg-primary text-white"
+                      : "text-text-body hover:bg-accent-light"
+                  }`}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
-              <div className="text-center mb-8 relative z-10">
-                <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+        {/* Services List */}
+        <div className="space-y-12">
+          {filteredServices.map((service, index) => {
+            const isEven = index % 2 === 0;
+            return (
+              <div
+                key={index}
+                className={`flex flex-col md:flex-row ${
+                  isEven ? "md:flex-row-reverse" : ""
+                } items-center gap-6 md:gap-10 p-4 md:p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-primary/10 bg-white`}
+              >
+                {/* Icon/Image */}
+                <div className="text-5xl text-primary md:w-1/3 flex justify-center">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold font-heading text-text-primary mb-4 group-hover:text-primary transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p className="text-text-primary opacity-80 leading-relaxed">
-                  {service.description}
-                </p>
+
+                {/* Details */}
+                <div className="md:w-2/3 text-center md:text-left">
+                  <h3 className="text-lg md:text-xl font-heading font-bold text-text-primary mb-2">
+                    {service.title}
+                  </h3>
+                  {service.tagline && (
+                    <p className="text-accent-dark font-semibold mb-2 text-sm md:text-base">
+                      {service.tagline}
+                    </p>
+                  )}
+                  <p className="text-text-body text-sm leading-relaxed mb-3">
+                    {service.description}
+                  </p>
+
+                  {service.features?.length > 0 && (
+                    <ul className="mt-2 space-y-1 text-sm text-text-body">
+                      {service.features.map((feature, fIndex) => (
+                        <li key={fIndex} className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-accent-dark rounded-full" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
-
-              {/* Features List */}
-              <ul className="space-y-4 relative z-10">
-                {service.features?.map((feature, featureIndex) => (
-                  <li
-                    key={featureIndex}
-                    className="flex items-start text-text-primary group-hover:text-text-primary"
-                  >
-                    <div className="w-6 h-6 bg-accent-dark rounded-full flex items-center justify-center mr-3 mt-0.5 group-hover:bg-primary transition-colors duration-300">
-                      <svg
-                        className="w-3 h-3 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="font-medium">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Service CTA */}
-              <div className="mt-8 text-center relative z-10">
-                <button className="bg-gradient-to-r from-primary to-accent-dark text-white px-6 py-2 rounded-lg font-semibold hover:from-accent-dark hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-md">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Section CTA */}
-        <div className="text-center mt-16">
-          <p className="text-lg text-text-primary mb-8 max-w-3xl mx-auto">
-            Ready to bring your vision to life? Let's discuss how we can create something extraordinary together.
-          </p>
-          <button className="bg-gradient-to-r from-accent-dark to-primary hover:from-primary hover:to-accent-dark text-white px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-2 border-transparent hover:border-accent-light">
-            Get Started Today
-          </button>
+            );
+          })}
         </div>
       </div>
     </section>

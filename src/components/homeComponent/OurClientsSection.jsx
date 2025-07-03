@@ -1,51 +1,55 @@
-import React from 'react'
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function OurClientsSection({ clientsData }) {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "0px",
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    <section className="py-20 px-6 bg-accent-light">
+    <section className="py-20 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-heading text-text-primary mb-6">
-            {clientsData.title}
-          </h2>
-          <div className="flex items-center justify-center mb-6">
-            <div className="h-1 w-20 bg-primary rounded-full"></div>
-            <div className="h-2 w-2 bg-accent-dark rounded-full mx-4"></div>
-            <div className="h-1 w-20 bg-primary rounded-full"></div>
-          </div>
-          <p className="text-xl font-body text-text-primary opacity-80 max-w-2xl mx-auto">
-            {clientsData.subtitle}
-          </p>
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-bold text-text-primary">{clientsData.title}</h2>
+          <p className="text-lg text-text-body mt-2">{clientsData.subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center mb-12">
+        <Slider {...settings}>
           {clientsData.clients.map((client, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 border-2 border-transparent hover:border-primary group"
-            >
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                {client.logo}
+            <div key={index} className="px-4">
+              <div className="h-40 flex items-center justify-center bg-white rounded-xl shadow-md border border-primary/10 hover:shadow-xl transition-all duration-300">
+                {/* Replace with <img src={client.logo} /> if logos are image URLs */}
+                <div className="text-5xl">{client.logo}</div>
               </div>
-              <h3 className="text-sm font-semibold text-text-primary text-center mb-2">
-                {client.name}
-              </h3>
-              <p className="text-xs text-text-primary opacity-70 text-center italic">
-                "{client.testimonial}"
-              </p>
             </div>
           ))}
-        </div>
-
-        <div className="text-center">
-          <p className="text-lg text-text-primary mb-8 max-w-3xl mx-auto">
-            Join our growing family of satisfied clients who trust us to capture their most important moments and create compelling visual stories.
-          </p>
-          <button className="bg-primary hover:bg-accent-dark text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-transparent hover:border-accent-light">
-            Become Our Client
-          </button>
-        </div>
+        </Slider>
       </div>
     </section>
-  )
+  );
 }

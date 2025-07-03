@@ -1,37 +1,57 @@
-import React from 'react';
+import React from "react";
 
 export default function SloganSection({ data }) {
-  if (!data) {
-    console.error("Slogan data is missing");
-    return null;
-  }
+  const displayData = data || {
+    title: "Elevate Your Digital Presence",
+    subtitle:
+      "We create powerful digital strategies that connect your brand with the right audience, driving growth and meaningful engagement in today's competitive landscape.",
+  };
 
   return (
-    // <section className="py-20 px-6 bg-gradient-to-br from-primary via-primary to-accent-dark text-white relative overflow-hidden">
-    <section
-      className="relative text-white py-20 px-6"
-      style={{
-        background: `linear-gradient(135deg, #A36767 0%, #C89B3C 100%)`
-      }}
-    >
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-light via-opacity-5 to-transparent"></div>
-      <div className="absolute top-0 left-0 w-96 h-96 bg-accent-light opacity-5 rounded-full -translate-x-48 -translate-y-48"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-dark opacity-10 rounded-full translate-x-48 translate-y-48"></div>
+    <section className="bg-background font-body">
+      <div className="grid max-w-screen-xl px-4 py-12 mx-auto lg:gap-8 xl:gap-0 lg:py-24 lg:grid-cols-12 items-center">
+        {/* Left Side Content */}
+        <div className="mr-auto place-self-center lg:col-span-7">
+          <h1 className="max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-tight md:text-5xl xl:text-6xl text-text-primary font-heading">
+            {displayData.title}
+          </h1>
+          <p className="max-w-2xl mb-8 text-lg font-light text-text-body">
+            {displayData.subtitle}
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="/"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-opacity-90 focus:ring-4 focus:ring-accent.dark"
+            >
+              Get Started
+              <svg
+                className="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </a>
+            <a
+              href="/"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-text-primary bg-accent-light border border-primary rounded-lg hover:bg-accent-dark focus:ring-4 focus:ring-accent.light"
+            >
+              Speak to Sales
+            </a>
+          </div>
+        </div>
 
-      <div className="max-w-6xl mx-auto text-center relative z-10">
-        <h2 className="text-4xl md:text-6xl font-bold font-heading mb-6 text-accent-light drop-shadow-lg">
-          {data.title}
-        </h2>
-        <p className="text-xl md:text-2xl font-body opacity-90 text-white max-w-4xl mx-auto leading-relaxed">
-          {data.subtitle}
-        </p>
-
-        {/* Decorative line */}
-        <div className="mt-8 flex items-center justify-center">
-          <div className="h-1 w-16 bg-accent-light rounded-full"></div>
-          <div className="h-2 w-2 bg-accent-dark rounded-full mx-4"></div>
-          <div className="h-1 w-16 bg-accent-light rounded-full"></div>
+        {/* Right Side Image */}
+        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <img
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+            alt="mockup"
+            className="rounded-xl shadow-xl dark:shadow-md"
+          />
         </div>
       </div>
     </section>

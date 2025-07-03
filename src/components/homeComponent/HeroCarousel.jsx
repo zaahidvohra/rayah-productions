@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-export default function HeroCarousel({ images, showButtons = true, autoSlide = true, slideInterval = 4000 }) {
+export default function HeroCarousel({ images, showButtons = false, autoSlide = true, slideInterval = 4000 }) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
 
@@ -29,7 +29,7 @@ export default function HeroCarousel({ images, showButtons = true, autoSlide = t
 
   return (
     <div
-      className="relative h-[450px] md:h-[550px] overflow-hidden"
+      className="relative h-[550px] md:h-[850px] overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
