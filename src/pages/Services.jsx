@@ -21,7 +21,7 @@ const ServicesPage = () => {
       <HeroSection />
 
       {/* Services Grid */}
-      <section className="py-20 px-6 bg-background">
+      <section className="py-20 px-6 bg-secondary">
         <div className="max-w-6xl mx-auto">
           <TextContainer
             title="Professional Services"
@@ -58,7 +58,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-6 bg-background">
+      <section className="py-20 px-6 bg-secondary">
         <div className="max-w-6xl mx-auto">
           <TextContainer
             title="Client Success Stories"

@@ -7,17 +7,17 @@ import BeforeAfterSlider from '../components/workComponent/BeforeAfterSlider';
 import CampaignCard from '../components/workComponent/CampaignCard';
 import SocialMediaPostsGrid from '../components/workComponent/SocialMediaPostsGrid';
 import CTASection from '../components/workComponent/CTASection';
-import { 
-  featuredProjects, 
-  mediaGallery, 
-  videoShowcase, 
-  beforeAfterData, 
-  campaignData 
+import {
+  featuredProjects,
+  mediaGallery,
+  videoShowcase,
+  beforeAfterData,
+  campaignData
 } from '../data/workData';
 
 export default function Work() {
   return (
-    <div className="min-h-screen bg-accent-light">
+    <div className="min-h-screen bg-secondary">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-accent-dark text-white py-20">
         <div className="container mx-auto px-6">
@@ -57,10 +57,10 @@ export default function Work() {
 
           <div className="space-y-8">
             {featuredProjects.map((project, index) => (
-              <FeaturedProjectCard 
-                key={index} 
-                project={project} 
-                index={index} 
+              <FeaturedProjectCard
+                key={index}
+                project={project}
+                index={index}
               />
             ))}
           </div>
@@ -197,7 +197,7 @@ export default function Work() {
           </motion.div>
         </div>
       </section> */}
-        <CTASection />
+      <CTASection />
     </div>
   );
 }

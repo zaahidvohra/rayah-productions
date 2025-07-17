@@ -25,7 +25,7 @@ export default function Home() {
   const [activeFilter, setActiveFilter] = React.useState("All");
   const [testimonialSlide, setTestimonialSlide] = React.useState(0);
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-secondary">
       {/* Hero Carousel */}
       {/* <HeroCarousel images={heroImages} /> */}
 

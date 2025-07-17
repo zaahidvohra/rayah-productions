@@ -10,7 +10,7 @@ import { contactData } from '../data/contactData';
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-secondary">
       {/* Hero Section */}
       <HeroSection
         title={contactData.hero.title}
