@@ -118,7 +118,10 @@ const ServiceCards = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <button className="bg-primary hover:bg-accent-dark text-secondary font-heading font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+          {/* <button className="bg-primary hover:bg-accent-dark text-secondary font-heading font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            Get Started Today
+          </button> */}
+<button className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg">
             Get Started Today
           </button>
         </div>

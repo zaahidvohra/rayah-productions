@@ -4,7 +4,7 @@ import logo from "../assets/rayahLogo.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-[#E8D5B7] via-[#D4C4A8] to-[#C4B59C] mt-16 py-12 text-text-primary relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-[#E8D5B7] via-[#D4C4A8] to-[#C4B59C] py-12 text-text-primary relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-15">
         <div className="absolute top-10 left-10 w-32 h-32 bg-accent-light rounded-full blur-3xl"></div>

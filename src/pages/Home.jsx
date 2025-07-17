@@ -1,5 +1,6 @@
 import React from "react";
 import HeroCarousel from "../components/homeComponent/HeroCarousel";
+import HeroSection from "../components/homeComponent/HeroSection";
 import SloganSection from "../components/homeComponent/SloganSection";
 import OurWorkSection from "../components/homeComponent/OurWorkSection";
 import OurClientsSection from "../components/homeComponent/OurClientsSection";
@@ -18,6 +19,7 @@ import {
 } from "../data/homeData";
 import FinalCta from "../components/homeComponent/FinalCta";
 import ServiceCards from "../components/homeComponent/ServiceCards";
+import PortfolioSection from "../components/homeComponent/PortfolioSection";
 
 export default function Home() {
   const [activeFilter, setActiveFilter] = React.useState("All");
@@ -25,31 +27,37 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Carousel */}
-      <HeroCarousel images={heroImages} />
+      {/* <HeroCarousel images={heroImages} /> */}
+
+      {/* Hero Section */}
+      <HeroSection/>
 
       {/* Slogan Section */}
-      <SloganSection data={sloganData} />
+      {/* <SloganSection data={sloganData} /> */}
 
       {/* Featured Services Section */}
-      <FeaturedServicesSection
+      {/* <FeaturedServicesSection
         data={featuredServicesData}
         filters={filters}
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}
-      />
+      /> */}
 
       <ServiceCards />
 
       {/* Our Work Section */}
       <OurWorkSection workData={ourWorkData} />
 
+      {/* Portfolio Section */}
+      <PortfolioSection />
+
       {/* Our Clients Section */}
       <OurClientsSection clientsData={ourClientsData} />
-      <TestimonialsSection
+      {/* <TestimonialsSection
         testimonials={testimonials}
         slideIndex={testimonialSlide}
         setSlideIndex={setTestimonialSlide}
-      />
+      /> */}
 
       <FinalCta />
     </div>
