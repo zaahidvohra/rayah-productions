@@ -1,16 +1,13 @@
-// src/pages/ContactPage.jsx
 import React from 'react';
 import HeroSection from '../components/contactusComponent/HeroSection';
 import TextContainer from '../components/TextContainer';
-import ServicesGrid from '../components/contactusComponent/ServicesGrid';
-import StatsSection from '../components/contactusComponent/StatsSection';
 import ContactInfo from '../components/contactusComponent/ContactInfo';
 import ContactForm from '../components/contactusComponent/ContactForm';
 import { contactData } from '../data/contactData';
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-secondary">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <HeroSection
         title={contactData.hero.title}
@@ -29,13 +26,6 @@ const ContactPage = () => {
               highlights={contactData.about.highlights}
               className="py-0"
             />
-
-            {/* Services Grid */}
-            <ServicesGrid services={contactData.services} />
-
-            {/* Stats Section */}
-            <StatsSection stats={contactData.stats} />
-
             {/* Contact Information */}
             <ContactInfo contactInfo={contactData.contactInfo} />
           </div>

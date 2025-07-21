@@ -1,5 +1,5 @@
 export default function HeroSection() {
-  const clientLogos = ["TechStart", "GrowthCorp", "Creative Solutions", "InnovateCo", "DigitalFirst"];
+  // const clientLogos = ["TechStart", "GrowthCorp", "Creative Solutions", "InnovateCo", "DigitalFirst"];
 
   return (
     <section className="relative bg-gradient-to-br from-secondary via-secondary to-accent-light py-20 overflow-hidden">

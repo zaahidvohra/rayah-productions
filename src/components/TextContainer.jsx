@@ -10,11 +10,11 @@ export default function TextContainer({ title, content, highlights = [], classNa
   const alignment = alignmentMap[align] || alignmentMap.center
 
   return (
-    <section className={`py-20 px-6 ${className}`}>
+    <section className={`py-6 px-6 ${className}`}>
       <div className={`max-w-5xl mx-auto flex flex-col ${alignment}`}>
         <h2 className="text-4xl md:text-5xl font-bold font-heading text-text-primary mb-6">
           {title}
-        </h2>
+        </h2> 
 
         <div className="flex items-center justify-center mb-6">
             <div className="h-1 w-20 bg-primary rounded-full"></div>
@@ -29,7 +29,7 @@ export default function TextContainer({ title, content, highlights = [], classNa
           </p>
 
           {highlights.length > 0 && (
-            <div className={`grid md:grid-cols-2 gap-6 mt-12 ${align !== 'center' ? 'w-full' : 'max-w-4xl mx-auto'}`}>
+            <div className={`grid md:grid-cols-1 gap-6 mt-12 ${align !== 'center' ? 'w-full' : 'max-w-4xl mx-auto'}`}>
               {highlights.map((highlight, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm border-l-4 border-primary hover:shadow-md transition-all duration-300">
                   <span className="text-text-primary font-medium text-lg">{highlight}</span>

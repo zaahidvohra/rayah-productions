@@ -21,11 +21,6 @@ const HeroSection = () => {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex items-center space-x-2 text-sm text-text-body opacity-70 mb-8">
-          <a href="/" className="hover:text-primary transition-colors">Home</a>
-          <ChevronRight size={16} />
-          <span>About Us</span>
-        </div>
 
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-text-primary mb-6">

@@ -3,7 +3,7 @@ import ImageCarousal3d from "./ImageCarousal3d";
 
 export default function OurWorkSection({ workData }) {
   return (
-    <section className="py-6 px-6 bg-accent-light">
+    <section className="py-6 px-6 bg-secondary">
   <div className="max-w-7xl mx-auto">
     {/* Title & brief */}
     <div className="text-center mb-16">

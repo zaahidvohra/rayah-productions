@@ -23,7 +23,7 @@ export default function ImageCarousal3d() {
   ];
 
   return (
-    <div className="h-96 w-[100%] ml-4 flex items-center justify-center overflow-show bg-accent-light">
+    <div className="h-96 w-[100%] ml-4 flex items-center justify-center overflow-show bg-secondary">
       <div className="relative lg:w-[220px] lg:h-[220px] md:w-[180px] md:h-[180px] sm:w-[120px] sm:h-[120px] w-[80px] h-[80px] [transform-style:preserve-3d] animate-[rotate_30s_linear_infinite]">
         {images.map((src, index) => (
           <span key={index} style={{ "--i": index + 1 }} className="span-style">

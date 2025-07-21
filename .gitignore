@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# wireframes
+wireframe.excalidraw
+
 # testing
 /coverage
 
