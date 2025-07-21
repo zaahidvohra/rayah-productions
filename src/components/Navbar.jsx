@@ -1,6 +1,6 @@
   import React, { useState } from "react";
   import { Link } from "react-router-dom";
-  import logo from "../assets/rayahLogo.png";
+  import logo from "../Assets/rayahLogo.png";
 
   export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
