@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/rayahLogo.png";
+import logo from "../Assets/rayahLogo.png";
 
 
 export default function Footer() {
