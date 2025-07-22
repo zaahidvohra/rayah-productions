@@ -1,12 +1,13 @@
 @import 'react-image-lightbox/style.css';
-@tailwind base; 
-@tailwind components; 
-@tailwind utilities; 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer components {
   .span-style {
     @apply absolute top-0 left-0 w-full h-full origin-center [transform-style:preserve-3d] lg:[transform:rotateY(calc(var(--i)*45deg))_translateZ(350px)] md:[transform:rotateY(calc(var(--i)*45deg))_translateZ(265px)] sm:[transform:rotateY(calc(var(--i)*45deg))_translateZ(216px)] [transform:rotateY(calc(var(--i)*45deg))_translateZ(120px)];
   }
+
   .img-style {
     @apply absolute top-0 left-0 w-full h-full rounded-sm object-cover [transition:2s] sm:hover:-translate-y-[50px] hover:-translate-y-[20px] hover:scale-[1.3];
   }
@@ -28,6 +29,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -51,4 +53,20 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
 }
