@@ -8,8 +8,6 @@ import img6 from '../../assets/testImages/img6.jpeg';
 import img7 from '../../assets/testImages/img7.jpeg';
 import img8 from '../../assets/testImages/img8.jpeg';
 
-
-
 export default function ImageCarousal3d() {
   const images = [
     img1,
