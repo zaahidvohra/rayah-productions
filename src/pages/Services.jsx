@@ -2,11 +2,13 @@
 import React, { useState } from 'react';
 import { servicesData, testimonialsData, processData } from '../data/ServicesData';
 import TextContainer from '../components/TextContainer';
-import HeroSection from '../components/servicesComponent/HeroSection_s';
+// import HeroSection from '../components/servicesComponent/HeroSection_s';
 import ServiceCard from '../components/servicesComponent/ServiceCard';
 import TestimonialCard from '../components/servicesComponent/TestimonialCard';
 import ProcessStep from '../components/servicesComponent/ProcessStep';
 import CTASection from '../components/servicesComponent/CTASection';
+import { heroImages } from "../data/heroData"
+import HeroCarousel from "../components/servicesComponent/HeroCarousel"
 
 const ServicesPage = () => {
   const [activeService, setActiveService] = useState(null);
@@ -18,7 +20,12 @@ const ServicesPage = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <HeroSection />
+      <HeroCarousel
+        images={heroImages}
+        showButtons={true}
+        autoSlide={true}
+        slideInterval={5000}
+      />
 
       {/* Services Grid */}
       <section className="py-20 px-6 bg-secondary">
@@ -41,7 +48,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Process Section
       <section className="py-20 px-6 bg-gradient-to-br from-accent-light to-secondary">
         <div className="max-w-6xl mx-auto">
           <TextContainer
@@ -55,10 +62,10 @@ const ServicesPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
-      <section className="py-20 px-6 bg-secondary">
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <TextContainer
             title="Client Success Stories"
@@ -74,7 +81,7 @@ const ServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <CTASection />
+      {/* <CTASection /> */}
     </div>
   );
 };

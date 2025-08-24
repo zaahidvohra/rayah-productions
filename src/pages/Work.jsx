@@ -1,17 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import FeaturedProjectCard from '../components/workComponent/FeaturedProjectCard';
-import MediaGalleryGrid from '../components/workComponent/MediaGalleryGrid';
+// import FeaturedProjectCard from '../components/workComponent/FeaturedProjectCard';
+// import MediaGalleryGrid from '../components/workComponent/MediaGalleryGrid';
 import VideoPlayerGrid from '../components/workComponent/VideoPlayerGrid';
-import BeforeAfterSlider from '../components/workComponent/BeforeAfterSlider';
+// import BeforeAfterSlider from '../components/workComponent/BeforeAfterSlider';
 import CampaignCard from '../components/workComponent/CampaignCard';
 import SocialMediaPostsGrid from '../components/workComponent/SocialMediaPostsGrid';
 import CTASection from '../components/workComponent/CTASection';
+import HeroCarousel from '../components/workComponent/HeroCarousel';
+import { heroImages } from "../data/heroData"
+
 import {
-  featuredProjects,
-  mediaGallery,
+  // featuredProjects,
+  // mediaGallery,
   videoShowcase,
-  beforeAfterData,
+  // beforeAfterData,
   campaignData
 } from '../data/workData';
 
@@ -19,7 +22,7 @@ export default function Work() {
   return (
     <div className="min-h-screen bg-secondary">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-accent-dark text-white py-20">
+      {/* <section className="bg-gradient-to-r from-primary to-accent-dark text-white py-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -36,10 +39,16 @@ export default function Work() {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+      <HeroCarousel
+              images={heroImages}
+              showButtons={true}
+              autoSlide={true}
+              slideInterval={5000}
+            />
 
       {/* Featured Projects Section */}
-      <section className="py-20 px-6">
+      {/* <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -65,10 +74,10 @@ export default function Work() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Social Media Grid Gallery */}
-      <section className="py-20 px-6 bg-background">
+      {/* <section className="py-20 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -86,7 +95,7 @@ export default function Work() {
 
           <MediaGalleryGrid mediaItems={mediaGallery} />
         </div>
-      </section>
+      </section> */}
 
       {/* Images Grid - Social Media Posts */}
       <section className="py-20 px-6 bg-accent-light">
@@ -131,7 +140,7 @@ export default function Work() {
       </section>
 
       {/* Before/After Photo Editing */}
-      <section className="py-20 px-6 bg-accent-light">
+      {/* <section className="py-20 px-6 bg-accent-light">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -149,7 +158,7 @@ export default function Work() {
 
           <BeforeAfterSlider beforeAfterItems={beforeAfterData} />
         </div>
-      </section>
+      </section> */}
 
       {/* Brand Campaign Highlights */}
       <section className="py-20 px-6 bg-background">
