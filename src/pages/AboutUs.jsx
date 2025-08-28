@@ -1,10 +1,10 @@
 import React from 'react';
-import { 
-  ArrowRight, 
-  Shield, 
-  Lightbulb, 
-  Target, 
-  Users, 
+import {
+  ArrowRight,
+  Shield,
+  Lightbulb,
+  Target,
+  Users,
   Linkedin,
   ChevronRight
 } from 'lucide-react';
@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div className="absolute top-40 right-20 w-16 h-16 bg-accent-dark rounded-full"></div>
         <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-primary rounded-full opacity-50"></div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div className="text-center max-w-4xl mx-auto">
@@ -28,8 +28,8 @@ const HeroSection = () => {
             <span className="text-primary">One Business at a Time.</span>
           </h1>
           <p className="text-lg md:text-xl text-text-body leading-relaxed max-w-3xl mx-auto">
-            At Rayah Productions, we believe in the transformative power of digital marketing. 
-            Founded on the principle of delivering tangible results and building lasting partnerships, 
+            At Rayah Productions, we believe in the transformative power of digital marketing.
+            Founded on the principle of delivering tangible results and building lasting partnerships,
             we are your dedicated ally in navigating the ever-evolving online landscape.
           </p>
         </div>
@@ -109,13 +109,13 @@ const OurStorySection = () => {
                 The Rayah Productions Difference
               </h3>
               <p className="text-text-body leading-relaxed mb-6">
-                Since our inception, our mission has been clear: to empower businesses with 
-                cutting-edge digital strategies that not only attract attention but convert leads 
+                Since our inception, our mission has been clear: to empower businesses with
+                cutting-edge digital strategies that not only attract attention but convert leads
                 into loyal customers. We're not just marketers; we're growth partners.
               </p>
               <p className="text-text-body leading-relaxed">
-                We pride ourselves on transparency, innovation, and a client-first approach. 
-                Every strategy we craft is data-driven, customized, and designed for measurable 
+                We pride ourselves on transparency, innovation, and a client-first approach.
+                Every strategy we craft is data-driven, customized, and designed for measurable
                 impact, ensuring you see real returns on your digital investment.
               </p>
             </div>
@@ -165,16 +165,16 @@ const FounderSection = () => {
 
                 <div className="space-y-4">
                   <p className="text-text-body leading-relaxed">
-                    Rayah Productions was founded by Moin Vohra, a seasoned digital strategist 
-                    with a passion for helping businesses unlock their online potential. With 
-                    years of experience in the digital realm, Moin envisioned a company that 
-                    cuts through the noise, delivering clear, effective, and results-oriented 
+                    Rayah Productions was founded by Moin Vohra, a seasoned digital strategist
+                    with a passion for helping businesses unlock their online potential. With
+                    years of experience in the digital realm, Moin envisioned a company that
+                    cuts through the noise, delivering clear, effective, and results-oriented
                     marketing solutions.
                   </p>
                   <p className="text-text-body leading-relaxed">
-                    Moin's leadership is anchored in a philosophy of continuous learning and 
-                    adapting to the dynamic digital landscape. He believes in fostering strong 
-                    client relationships built on trust, transparency, and a shared commitment 
+                    Moin's leadership is anchored in a philosophy of continuous learning and
+                    adapting to the dynamic digital landscape. He believes in fostering strong
+                    client relationships built on trust, transparency, and a shared commitment
                     to success.
                   </p>
                 </div>
@@ -211,8 +211,8 @@ const CTASection = () => {
             Your Digital Journey Starts Here
           </h2>
           <p className="text-lg text-text-body leading-relaxed mb-12">
-            We are more than just a marketing agency; we are your strategic partner in 
-            achieving sustainable growth. Explore our services or connect with us to 
+            We are more than just a marketing agency; we are your strategic partner in
+            achieving sustainable growth. Explore our services or connect with us to
             discover how Rayah Productions can elevate your brand.
           </p>
 
