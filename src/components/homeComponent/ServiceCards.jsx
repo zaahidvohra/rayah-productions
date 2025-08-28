@@ -1,49 +1,49 @@
 import React from 'react';
-import { Code, Palette, Smartphone, Globe, Database, Shield } from 'lucide-react';
+import { Video, Camera, CameraIcon, Edit3, TrendingUp, Users } from 'lucide-react';
 
 const ServiceCards = () => {
   const services = [
     {
       id: 1,
-      name: 'Web Development',
-      icon: <Globe className="w-8 h-8" />,
-      description: 'Custom websites and web applications built with modern technologies. We create responsive, fast, and user-friendly solutions.',
-      features: ['React & Next.js', 'Responsive Design', 'Performance Optimization']
+      name: 'Video Production',
+      icon: <Video className="w-8 h-8" />,
+      description: 'Professional video production services from concept to final delivery. Creating compelling visual stories that engage your audience.',
+      features: ['Corporate Videos', 'Commercial Shoots', 'Event Coverage', 'Drone Footage']
     },
     {
       id: 2,
-      name: 'Mobile Development',
-      icon: <Smartphone className="w-8 h-8" />,
-      description: 'Native and cross-platform mobile apps for iOS and Android. Delivering seamless user experiences across all devices.',
-      features: ['React Native', 'Flutter', 'iOS & Android']
+      name: 'Cinematic Photography',
+      icon: <Camera className="w-8 h-8" />,
+      description: 'High-quality cinematic photography for brands, events, and personal projects. Capturing moments that tell your story.',
+      features: ['Brand Photography', 'Event Photography', 'Portrait Sessions', 'Product Photography']
     },
     {
       id: 3,
-      name: 'UI/UX Design',
-      icon: <Palette className="w-8 h-8" />,
-      description: 'Beautiful and intuitive user interfaces that enhance user experience. From wireframes to final designs.',
-      features: ['User Research', 'Prototyping', 'Design Systems']
+      name: 'Social Media Management',
+      icon: <CameraIcon className="w-8 h-8" />,
+      description: 'Complete social media strategy and management to grow your online presence and engage with your target audience.',
+      features: ['Content Strategy', 'Daily Posting', 'Community Management', 'Analytics & Reporting']
     },
     {
       id: 4,
-      name: 'Backend Development',
-      icon: <Database className="w-8 h-8" />,
-      description: 'Robust server-side solutions with secure APIs and database management. Scalable architecture for your applications.',
-      features: ['Node.js', 'Python', 'Database Design']
+      name: 'Content Creation',
+      icon: <Edit3 className="w-8 h-8" />,
+      description: 'Creative content tailored for different platforms. From short-form videos to engaging posts that drive results.',
+      features: ['Short-Form Videos', 'Graphic Design', 'Copywriting', 'Brand Storytelling']
     },
     {
       id: 5,
-      name: 'Custom Software',
-      icon: <Code className="w-8 h-8" />,
-      description: 'Tailored software solutions for your specific business needs. From concept to deployment and maintenance.',
-      features: ['Business Analysis', 'Custom Development', 'Integration']
+      name: 'Social Media Optimization',
+      icon: <TrendingUp className="w-8 h-8" />,
+      description: 'Strategic optimization to maximize reach, engagement, and conversions across all social media platforms.',
+      features: ['Hashtag Strategy', 'Posting Schedule', 'Audience Analysis', 'Growth Optimization']
     },
     {
       id: 6,
-      name: 'Security Solutions',
-      icon: <Shield className="w-8 h-8" />,
-      description: 'Comprehensive security audits and implementation. Protecting your digital assets and user data.',
-      features: ['Security Audits', 'Vulnerability Testing', 'Compliance']
+      name: 'Influencer Collaboration',
+      icon: <Users className="w-8 h-8" />,
+      description: 'Building authentic partnerships and collaborations to expand your brand reach and create impactful content.',
+      features: ['Partnership Strategy', 'Collaboration Management', 'Campaign Development', 'Performance Tracking']
     }
   ];
 
@@ -70,9 +70,9 @@ const ServiceCards = () => {
             >
               {/* Card Container */}
               <div className="relative w-full h-full transition-transform duration-700 group-hover:[transform:rotateY(180deg)]" style={{ transformStyle: 'preserve-3d' }}>
-                
+
                 {/* Front of Card */}
-                <div 
+                <div
                   className="absolute inset-0 w-full h-full backface-hidden bg-secondary border-2 border-primary/20 rounded-xl p-6 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-accent-light/50"
                   style={{ backfaceVisibility: 'hidden' }}
                 >
@@ -88,7 +88,7 @@ const ServiceCards = () => {
                 </div>
 
                 {/* Back of Card */}
-                <div 
+                <div
                   className="absolute inset-0 w-full h-full backface-hidden bg-primary text-secondary rounded-xl p-6 flex flex-col justify-center shadow-lg"
                   style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                 >
@@ -121,7 +121,7 @@ const ServiceCards = () => {
           {/* <button className="bg-primary hover:bg-accent-dark text-secondary font-heading font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
             Get Started Today
           </button> */}
-<button className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg">
+          <button className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg">
             Get Started Today
           </button>
         </div>
