@@ -45,15 +45,7 @@ const ServiceCard = ({ service, isActive, onToggle }) => {
                                 {feature}
                             </li>
                         ))}
-                    </ul>
-                    <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-primary">
-                            {service.price}
-                        </span>
-                        <button className="text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-primary to-accent-dark">
-                            Get Started
-                        </button>
-                    </div>
+                    </ul>    
                 </div>
             )}
         </div>
