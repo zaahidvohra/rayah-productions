@@ -1,4 +1,5 @@
 // src/data/contactData.js
+import { Mail, Phone, MapPin, Linkedin, Github, Instagram, Youtube } from 'lucide-react';
 export const contactData = {
     hero: {
         title: "Let's Create Visual",
@@ -16,25 +17,25 @@ export const contactData = {
 
     services: [
         {
-            icon: '📷',
+            icon : '',
             title: 'Portrait Photography',
             desc: 'Capturing the essence of personality through professional portrait sessions',
             color: 'from-primary to-amber-600'
         },
         {
-            icon: '🎥',
+            icon: '',
             title: 'Cinematic Videography',
             desc: 'Creating film-quality narratives that tell your story with artistic vision',
             color: 'from-accent-dark to-primary'
         },
         {
-            icon: '📅',
+            icon: '',
             title: 'Event Coverage',
             desc: 'Documenting your special moments with discretion and creative flair',
             color: 'from-primary to-rose-600'
         },
         {
-            icon: '🏆',
+            icon: '',
             title: 'Commercial Production',
             desc: 'Elevating brands through compelling visual content and marketing materials',
             color: 'from-accent-dark to-orange-600'
@@ -54,18 +55,18 @@ export const contactData = {
         socialLinks: [
             {
                 url: 'https://www.instagram.com/moin_2896/',
-                icon: '📷',
-                color: 'from-pink-500 to-purple-500'
+                icon: Instagram,
+                color: 'bg-gradient-to-r from-pink-500 to-purple-500'
             },
             {
                 url: 'https://www.youtube.com/channel/UCkWn6vJ34Cs05YyYaU_CAaA',
-                icon: '🎥',
-                color: 'from-red-500 to-red-600'
+                icon: Youtube,
+                color: 'bg-gradient-to-r from-red-500 to-red-600'
             },
             {
-                url: 'https://www.youtube.com/channel/UCkWn6vJ34Cs05YyYaU_CAaA',
-                icon: '💼',
-                color: 'from-blue-500 to-blue-600'
+                url: 'https://www.linkedin.com/in/your-linkedin-profile',
+                icon: Linkedin,
+                color: 'bg-gradient-to-r from-blue-500 to-blue-600'
             }
         ]
     },
