@@ -1,18 +1,31 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 
-const CTASection = ({ cta, onButtonClick }) => {
+const CTASection = () => {
 return (
-<div className="text-center bg-gradient-to-r from-primary to-accent-dark rounded-3xl p-12 text-white">
-    <h3 className="font-heading text-3xl font-bold mb-4">{cta.title}</h3>
-    <p className="font-body text-xl mb-8 text-accent-light/90">
-        {cta.description}
-    </p>
-    <button
-        className="bg-white text-primary font-heading font-semibold px-8 py-4 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-        onClick={onButtonClick}>
-        {cta.buttonText}
-    </button>
-</div>
+<section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-text-primary mb-8">
+            Your Digital Journey Starts Here
+          </h2>
+          <p className="text-lg text-text-body leading-relaxed mb-12">
+            We’re not here for trends. We’re here for narrating tales.
+            We blend strategy with soul. <b>That’s Rayah.</b>
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-opacity-90 transition-colors font-medium flex items-center justify-center space-x-2">
+              <span>See Our Services</span>
+              <ArrowRight size={20} />
+            </button>
+            <button className="bg-transparent border-2 border-primary text-primary px-8 py-4 rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
+              Let's Discuss Your Project
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 );
 };
 

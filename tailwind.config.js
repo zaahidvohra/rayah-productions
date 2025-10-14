@@ -16,6 +16,7 @@ module.exports = {
           body: '#4B3B42',
         },
       },
+      // https://fonts.google.com/specimen/Montserrat
       fontFamily: {
         heading: ['Poppins', 'sans-serif'],
         body: ['Inter', 'sans-serif'],

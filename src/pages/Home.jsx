@@ -6,7 +6,7 @@ import OurClientsSection from "../components/homeComponent/OurClientsSection";
 // Import data
 import {
   ourWorkData,
-  ourClientsData,
+  // ourClientsData,
 } from "../data/homeData";
 import FinalCta from "../components/homeComponent/FinalCta";
 import ServiceCards from "../components/homeComponent/ServiceCards";
@@ -28,7 +28,7 @@ export default function Home() {
       <PortfolioSection />
 
       {/* Our Clients Section */}
-      <OurClientsSection clientsData={ourClientsData} />
+      <OurClientsSection />
 
 
       <FinalCta />

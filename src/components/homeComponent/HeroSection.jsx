@@ -8,12 +8,12 @@ export default function HeroSection() {
           {/* Content Section */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-6xl font-heading font-bold text-text-primary mb-6 leading-tight">
-              Unlock Your Digital Potential.
-              <span className="block text-primary">Grow Your Business Online.</span>
+              Turning Clicks into Connections.
+              <span className="block text-primary">We don’t just market brands. We narrate stories that stick.</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-text-body mb-8 max-w-3xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed">
-              Rayah Productions is your one-stop partner for comprehensive digital marketing solutions that deliver measurable results.
+              At Rayah Productions, we blend strategy with soul to help your brand breathe, speak, and shine in the digital world.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">

@@ -28,7 +28,7 @@ export default function OurWorkSection({ workData }) {
 
   {/* Button inside centered container */}
   <div className="max-w-7xl mx-auto my-4 text-center">
-    <button className="bg-gradient-to-r from-primary to-accent-dark hover:from-accent-dark hover:to-primary text-white px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-2 border-transparent hover:border-accent-light">
+    <button className="bg-primary text-white px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-2 border-transparent hover:border-accent-light">
       View Full Portfolio
     </button>
   </div>

@@ -7,42 +7,42 @@ const ServiceCards = () => {
       id: 1,
       name: 'Video Production',
       icon: <Video className="w-8 h-8" />,
-      description: 'Professional video production services from concept to final delivery. Creating compelling visual stories that engage your audience.',
+      description: 'From corporate films to drone shots, our lenses find the moment that matters. We direct, shoot, and edit videos that not only inform - but to captivate attention.',
       features: ['Corporate Videos', 'Commercial Shoots', 'Event Coverage', 'Drone Footage']
     },
     {
       id: 2,
       name: 'Cinematic Photography',
       icon: <Camera className="w-8 h-8" />,
-      description: 'High-quality cinematic photography for brands, events, and personal projects. Capturing moments that tell your story.',
+      description: 'Be it products, people, or places - our frames narrate elegance. Our photos whisper stories before the captions speak.',
       features: ['Brand Photography', 'Event Photography', 'Portrait Sessions', 'Product Photography']
     },
     {
       id: 3,
       name: 'Social Media Management',
       icon: <CameraIcon className="w-8 h-8" />,
-      description: 'Complete social media strategy and management to grow your online presence and engage with your target audience.',
+      description: 'We don’t just post. We plan, converse, respond, analyze and eventually help your brand thriving across every scroll and swipe.',
       features: ['Content Strategy', 'Daily Posting', 'Community Management', 'Analytics & Reporting']
     },
     {
       id: 4,
       name: 'Content Creation',
       icon: <Edit3 className="w-8 h-8" />,
-      description: 'Creative content tailored for different platforms. From short-form videos to engaging posts that drive results.',
+      description: ' From scripts to reels, graphics to words - we design content tailored for different platforms, audiences, and purposes. ',
       features: ['Short-Form Videos', 'Graphic Design', 'Copywriting', 'Brand Storytelling']
     },
     {
       id: 5,
       name: 'Social Media Optimization',
       icon: <TrendingUp className="w-8 h-8" />,
-      description: 'Strategic optimization to maximize reach, engagement, and conversions across all social media platforms.',
+      description: 'Timing. Hashtags. Audience behaviour. We deep dive into patterns to boost engagement and bring real, organic growth.',
       features: ['Hashtag Strategy', 'Posting Schedule', 'Audience Analysis', 'Growth Optimization']
     },
     {
       id: 6,
       name: 'Influencer Collaboration',
       icon: <Users className="w-8 h-8" />,
-      description: 'Building authentic partnerships and collaborations to expand your brand reach and create impactful content.',
+      description: 'We don’t just find influencers. We match your story with the voice that amplifies it best. With authenticity and strategy.',
       features: ['Partnership Strategy', 'Collaboration Management', 'Campaign Development', 'Performance Tracking']
     }
   ];
