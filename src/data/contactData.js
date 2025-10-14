@@ -7,7 +7,7 @@ export const contactData = {
     },
 
     about: {
-        title: "Why Choose Me?",
+        title: "Why Choose Us?",
         content: "With over 8 years of experience in visual storytelling, I specialize in capturing the authentic emotions and genuine moments that make your story unique. My approach combines technical expertise with artistic vision to deliver images and videos that not only document your moments but elevate them into timeless art.",
         highlights: [
             "Whether you're planning an intimate wedding, launching a new brand, or celebrating a milestone, I'm here to ensure every detail is captured with the attention and creativity it deserves."
