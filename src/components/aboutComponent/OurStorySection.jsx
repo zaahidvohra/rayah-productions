@@ -71,7 +71,7 @@ const OurStorySection = () => {
                 </h3>
                 <p className="text-text-body leading-relaxed mb-6">
                   Rayah Productions isn’t just another digital agency - we’re your creative allies in this beautiful chaos of the online world.
-                  Founded on the belief that stories sell better than ads, we’ve spent the past 5 years helping brands not just shine, but speak with clarity, charm and conviction.
+                  Founded on the belief that stories sell better than ads, we’ve spent the past 8 years helping brands not just shine, but speak with clarity, charm and conviction.
   
                 </p>
                 <p className="text-text-body leading-relaxed">

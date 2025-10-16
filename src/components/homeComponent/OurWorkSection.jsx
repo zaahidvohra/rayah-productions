@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageCarousal3d from "./ImageCarousal3d";
+import { Link } from 'react-router-dom';
 
 export default function OurWorkSection({ workData }) {
   return (
@@ -28,9 +29,9 @@ export default function OurWorkSection({ workData }) {
 
   {/* Button inside centered container */}
   <div className="max-w-7xl mx-auto my-4 text-center">
-    <button className="bg-primary text-white px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-2 border-transparent hover:border-accent-light">
+    <Link to='/portfolio' className="bg-primary text-white px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-2 border-transparent hover:border-accent-light">
       View Full Portfolio
-    </button>
+    </Link>
   </div>
 </section>
 

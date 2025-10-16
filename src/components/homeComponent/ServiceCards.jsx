@@ -1,5 +1,6 @@
 import React from 'react';
 import { Video, Camera, CameraIcon, Edit3, TrendingUp, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ServiceCards = () => {
   const services = [
@@ -121,9 +122,9 @@ const ServiceCards = () => {
           {/* <button className="bg-primary hover:bg-accent-dark text-secondary font-heading font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
             Get Started Today
           </button> */}
-          <button className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg">
+          <Link to="/contact" className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg">
             Get Started Today
-          </button>
+          </Link>
         </div>
       </div>
     </div>

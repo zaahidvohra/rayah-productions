@@ -3,7 +3,7 @@ import React from 'react';
 
 const HeroSection = ({ title, subtitle, description, className = "" }) => {
     return (
-        <div className={`bg-gradient-to-r from-primary to-accent-dark text-white py-16 ${className}`}>
+        <div className={`relative h-[550px] md:h-[550px] bg-gradient-to-r from-primary to-accent-dark text-white py-16 ${className}`}>
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl">
                     <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6 leading-tight">

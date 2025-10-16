@@ -39,9 +39,9 @@ export default function PortfolioSection() {
                   <div className="text-sm text-text-body">Timeline</div>
                 </div>
               </div>
-              <button className="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-200">
+              {/* <button className="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-200">
                 Read Full Case Study
-              </button>
+              </button> */}
             </div>
             <div className="md:w-1/2 bg-gradient-to-br from-accent-light to-accent-dark p-8 lg:p-12 flex items-center justify-center">
               <div className="text-center">

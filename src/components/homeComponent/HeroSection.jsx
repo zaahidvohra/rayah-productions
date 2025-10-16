@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HeroSection() {
   // const clientLogos = ["TechStart", "GrowthCorp", "Creative Solutions", "InnovateCo", "DigitalFirst"];
 
@@ -9,20 +11,30 @@ export default function HeroSection() {
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-6xl font-heading font-bold text-text-primary mb-6 leading-tight">
               Turning Clicks into Connections.
-              <span className="block text-primary">We don’t just market brands. We narrate stories that stick.</span>
+              <span className="block text-primary">
+                We don’t just market brands. We narrate stories that stick.
+              </span>
             </h1>
 
             <p className="text-xl md:text-2xl text-text-body mb-8 max-w-3xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed">
-              At Rayah Productions, we blend strategy with soul to help your brand breathe, speak, and shine in the digital world.
+              At Rayah Productions, we blend strategy with soul to help your
+              brand breathe, speak, and shine in the digital world.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <button className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Link
+                to="/services"
+                className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
                 Explore Our Services
-              </button>
-              <button className="border-2 border-primary text-primary px-8 py-4 rounded-lg text-lg font-medium hover:bg-primary hover:text-white transition-all duration-200">
+              </Link>
+
+              <Link
+                to="/portfolio"
+                className="border-2 border-primary text-primary px-8 py-4 rounded-lg text-lg font-medium hover:bg-primary hover:text-white transition-all duration-200"
+              >
                 View Our Portfolio
-              </button>
+              </Link>
             </div>
 
             {/* <div className="text-sm text-text-body mb-4">Trusted by leading brands:</div>
@@ -42,8 +54,12 @@ export default function HeroSection() {
               <div className="w-80 h-80 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-2xl">
                 <div className="w-64 h-64 bg-white rounded-full flex items-center justify-center shadow-inner">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-primary mb-2">RAYAH</div>
-                    <div className="text-lg text-text-body font-medium">PRODUCTIONS</div>
+                    <div className="text-4xl font-bold text-primary mb-2">
+                      RAYAH
+                    </div>
+                    <div className="text-lg text-text-body font-medium">
+                      PRODUCTIONS
+                    </div>
                     <div className="w-16 h-1 bg-primary mx-auto mt-2 rounded-full"></div>
                   </div>
                 </div>

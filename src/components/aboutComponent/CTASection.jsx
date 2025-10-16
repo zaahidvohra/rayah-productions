@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CTASection = () => {
 return (
@@ -15,13 +16,13 @@ return (
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-opacity-90 transition-colors font-medium flex items-center justify-center space-x-2">
+            <Link to="/services" className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-opacity-90 transition-colors font-medium flex items-center justify-center space-x-2">
               <span>See Our Services</span>
               <ArrowRight size={20} />
-            </button>
-            <button className="bg-transparent border-2 border-primary text-primary px-8 py-4 rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
+            </Link>
+            <Link to="/contact" className="bg-transparent border-2 border-primary text-primary px-8 py-4 rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
               Let's Discuss Your Project
-            </button>
+            </Link>
           </div>
         </div>
       </div>

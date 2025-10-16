@@ -16,7 +16,7 @@ export const aboutData = {
     introduction: {
         title: "Hello, I'm Moin",
         paragraphs: [
-            "Welcome to my world of visual storytelling. I'm a passionate photographer and videographer based in the vibrant city of Vadodara, Gujarat. For over 5 years, I've been capturing life's most precious moments and transforming them into timeless memories.",
+            "Welcome to my world of visual storytelling. I'm a passionate photographer and videographer based in the vibrant city of Vadodara, Gujarat. For over 8 years, I've been capturing life's most precious moments and transforming them into timeless memories.",
             "My journey began with a simple love for freezing moments in time, but it has evolved into a deep passion for creating cinematic experiences that tell authentic stories. Every frame I capture is infused with emotion, creativity, and technical excellence.",
             "Whether it's the intimate glance between newlyweds, the joy of a family celebration, or the professional polish of a corporate event, I believe every moment deserves to be captured with artistry and preserved with care."
         ]

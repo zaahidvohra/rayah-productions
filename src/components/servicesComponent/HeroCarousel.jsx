@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function HeroCarousel({ images, showButtons = false, autoSlide = true, slideInterval = 4000 }) {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -63,12 +64,12 @@ export default function HeroCarousel({ images, showButtons = false, autoSlide = 
           </p>
           {showButtons && (
             <div className="space-x-4 animate-fade-in-up animation-delay-400">
-              <button className="bg-accent-dark hover:bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-transparent hover:border-accent-light">
+              <Link to="/portfolio" className="bg-accent-dark hover:bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-transparent hover:border-accent-light">
                 View Portfolio
-              </button>
-              <button className="border-2 border-accent-light text-accent-light hover:bg-accent-light hover:text-text-primary px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+              </Link>
+              <Link to="/contact" className="border-2 border-accent-light text-accent-light hover:bg-accent-light hover:text-text-primary px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
                 Contact Us
-              </button>
+              </Link>
             </div>
           )}
         </div>
