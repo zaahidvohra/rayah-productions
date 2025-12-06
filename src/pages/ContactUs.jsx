@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSection from '../components/contactusComponent/HeroSection';
+// import HeroSection from '../components/contactusComponent/HeroSection';
 import TextContainer from '../components/TextContainer';
 import ContactInfo from '../components/contactusComponent/ContactInfo';
 import ContactForm from '../components/contactusComponent/ContactForm';
@@ -9,11 +9,11 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <HeroSection
+      {/* <HeroSection
         title={contactData.hero.title}
         subtitle={contactData.hero.subtitle}
         description={contactData.hero.description}
-      />
+      /> */}
 
       <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-16 items-start">

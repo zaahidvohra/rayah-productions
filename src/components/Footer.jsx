@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-primary/30 rounded-full blur-2xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}

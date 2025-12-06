@@ -1,12 +1,12 @@
 // OptimizedServicesPage.jsx
 import React, { useState } from 'react';
-import { servicesData, testimonialsData, processData } from '../data/ServicesData';
+import { servicesData, testimonialsData } from '../data/ServicesData';
 import TextContainer from '../components/TextContainer';
 // import HeroSection from '../components/servicesComponent/HeroSection_s';
 import ServiceCard from '../components/servicesComponent/ServiceCard';
 import TestimonialCard from '../components/servicesComponent/TestimonialCard';
-import ProcessStep from '../components/servicesComponent/ProcessStep';
-import CTASection from '../components/servicesComponent/CTASection';
+// import ProcessStep from '../components/servicesComponent/ProcessStep';
+// import CTASection from '../components/servicesComponent/CTASection';
 import { heroImages } from "../data/heroData"
 import HeroCarousel from "../components/servicesComponent/HeroCarousel"
 
@@ -22,13 +22,13 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <HeroCarousel
         images={heroImages}
-        showButtons={true}
+        showButtons={false}
         autoSlide={true}
         slideInterval={5000}
       />
 
       {/* Services Grid */}
-      <section className="py-20 px-6 bg-secondary">
+      <section className="py-16 px-6 bg-secondary">
         <div className="max-w-6xl mx-auto">
           <TextContainer
             title="Professional Services"
@@ -49,7 +49,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Process Section
-      <section className="py-20 px-6 bg-gradient-to-br from-accent-light to-secondary">
+      <section className="py-16 px-6 bg-gradient-to-br from-accent-light to-secondary">
         <div className="max-w-6xl mx-auto">
           <TextContainer
             title="My Creative Process"
@@ -65,7 +65,7 @@ const ServicesPage = () => {
       </section> */}
 
       {/* Testimonials */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <TextContainer
             title="Client Success Stories"

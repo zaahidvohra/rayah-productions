@@ -25,17 +25,17 @@ export default function CampaignCard({ campaigns }) {
           </div>
 
           <div className="p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">{campaign.title}</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">{campaign.title}</h3>
             <p className="text-gray-600 mb-4 text-sm">{campaign.description}</p>
 
             {/* Campaign Stats */}
             <div className="grid grid-cols-2 gap-4 mb-4">
               <div className="text-center p-3 bg-gray-50 rounded-lg">
-                <div className="text-2xl font-bold text-primary">{campaign.reach}</div>
+                <div className="text-xl font-bold text-primary">{campaign.reach}</div>
                 <div className="text-xs text-gray-600">Reach</div>
               </div>
               <div className="text-center p-3 bg-gray-50 rounded-lg">
-                <div className="text-2xl font-bold text-primary">{campaign.engagement}</div>
+                <div className="text-xl font-bold text-primary">{campaign.engagement}</div>
                 <div className="text-xs text-gray-600">Engagement</div>
               </div>
             </div>

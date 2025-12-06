@@ -30,7 +30,7 @@ export default function CinematicSpotlightCarousel() {
       {
         name: "Gujarat Tourism",
         logo: "🏛️",
-        content: "Brought festivals and forgotten folklore alive on screens. Executed India's top influencer meets and campaigns like 'Gujarat Ki Kahaniyan'.",
+        content: "Brought festivals and forgotten folklore alive on screens. Executed India's top influencer meets and campaigns.",
         icon: Users,
         color: "from-green-400 to-teal-500"
       }
@@ -40,14 +40,11 @@ export default function CinematicSpotlightCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Auto-advance spotlight every 5 seconds
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % clientsData.clients.length);
-    }, 5000);
-
+    }, 3000);
     return () => clearInterval(interval);
   }, [isAutoPlaying, clientsData.clients.length]);
 
@@ -67,67 +64,63 @@ export default function CinematicSpotlightCarousel() {
   };
 
   return (
-    <section className="py-16 bg-secondary relative overflow-hidden">
-      {/* Background Cinema Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-primary animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-24 h-24 rounded-full bg-accent-dark animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full bg-primary animate-pulse delay-500"></div>
+    // FIX 1: Reduced py-12 to py-8 for mobile to make it shorter
+    <section className="py-8 md:py-16 bg-secondary relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute top-10 left-10 w-20 md:w-32 h-20 md:h-32 rounded-full bg-primary animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-16 md:w-24 h-16 md:h-24 rounded-full bg-accent-dark animate-pulse delay-1000"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-text-primary font-heading mb-4">
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-text-primary font-heading mb-4 px-2">
             {clientsData.title}
           </h2>
-          <p className="text-xl text-text-body font-body max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-text-body font-body max-w-2xl mx-auto px-4">
             {clientsData.subtitle}
           </p>
         </div>
 
-        {/* Marquee Container */}
         <div className="relative">
-
-          {/* Main Spotlight Area */}
-          <div className="relative h-96 flex items-center justify-center">
-            {/* Navigation Arrows */}
+          {/* FIX 2: Reduced height from h-[26rem] to h-[22rem] on mobile */}
+          <div className="relative h-[22rem] md:h-96 flex items-center justify-center">
+            
+            {/* FIX 3: Added 'hidden md:block' to hide buttons on mobile */}
             <button
               onClick={goToPrev}
-              className="absolute left-8 z-20 p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 text-text-primary hover:scale-110"
+              className="hidden md:block absolute left-8 z-30 p-3 rounded-full bg-white/20 backdrop-blur-md shadow-lg hover:bg-white/30 text-text-primary transition-all hover:scale-110"
             >
               <ChevronLeft size={24} />
             </button>
             
             <button
               onClick={goToNext}
-              className="absolute right-8 z-20 p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 text-text-primary hover:scale-110"
+              className="hidden md:block absolute right-8 z-30 p-3 rounded-full bg-white/20 backdrop-blur-md shadow-lg hover:bg-white/30 text-text-primary transition-all hover:scale-110"
             >
               <ChevronRight size={24} />
             </button>
 
-            {/* Spotlight Cards */}
-            <div className="relative w-full max-w-4xl mx-auto flex items-center justify-center">
+            <div className="relative w-full flex items-center justify-center perspective-1000">
               {clientsData.clients.map((client, index) => {
                 const isActive = index === currentIndex;
                 const isPrev = index === (currentIndex - 1 + clientsData.clients.length) % clientsData.clients.length;
                 const isNext = index === (currentIndex + 1) % clientsData.clients.length;
                 
-                let position = 'translate-x-0 scale-75 opacity-30';
-                let zIndex = 1;
+                let positionClasses = '';
+                let zIndex = 0;
                 
                 if (isActive) {
-                  position = 'translate-x-0 scale-100 opacity-100';
-                  zIndex = 10;
+                  positionClasses = 'translate-x-0 scale-100 opacity-100';
+                  zIndex = 20;
                 } else if (isPrev) {
-                  position = '-translate-x-80 scale-75 opacity-40';
-                  zIndex = 5;
+                  positionClasses = 'translate-x-0 md:-translate-x-80 scale-95 md:scale-75 opacity-0 md:opacity-40';
+                  zIndex = 10;
                 } else if (isNext) {
-                  position = 'translate-x-80 scale-75 opacity-40';
-                  zIndex = 5;
+                  positionClasses = 'translate-x-0 md:translate-x-80 scale-95 md:scale-75 opacity-0 md:opacity-40';
+                  zIndex = 10;
                 } else {
-                  position = 'translate-x-0 scale-50 opacity-0';
-                  zIndex = 1;
+                  positionClasses = 'translate-x-0 scale-50 opacity-0 pointer-events-none';
+                  zIndex = 0;
                 }
 
                 const IconComponent = client.icon;
@@ -135,46 +128,39 @@ export default function CinematicSpotlightCarousel() {
                 return (
                   <div
                     key={index}
-                    className={`absolute transition-all duration-700 ease-out ${position}`}
+                    className={`absolute transition-all duration-700 ease-out transform ${positionClasses}`}
                     style={{ zIndex }}
                   >
-                    <div className={`relative w-96 h-80 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm border border-white/20 ${isActive ? 'ring-4 ring-primary/30' : ''}`}>
-                      {/* Top Image Section with Logo */}
-                      <div className={`relative w-full h-32 bg-gradient-to-br ${client.color} opacity-90 flex items-center justify-center`}>
-                        <div className="text-6xl">{client.logo}</div>
-                        
-                        {/* Icon in top right corner */}
+                    {/* FIX 4: Adjusted card height h-[20rem] to match container */}
+                    <div className={`relative w-[85vw] max-w-sm md:w-96 h-[20rem] md:h-80 rounded-2xl overflow-hidden shadow-xl backdrop-blur-sm border border-white/20 bg-white ${isActive ? 'ring-2 md:ring-4 ring-primary/30' : ''}`}>
+                      
+                      <div className={`relative w-full h-24 md:h-32 bg-gradient-to-br ${client.color} opacity-90 flex items-center justify-center`}>
+                        <div className="text-5xl md:text-6xl animate-float">{client.logo}</div>
                         <div className="absolute top-4 right-4 p-2 rounded-full bg-white/20 backdrop-blur-sm">
-                          <IconComponent size={20} />
+                          <IconComponent size={18} className="text-white" />
                         </div>
-                        
-                        {/* Spotlight Effect on image section */}
                         {isActive && (
                           <div className="absolute inset-0 bg-gradient-radial from-white/20 via-transparent to-transparent animate-pulse"></div>
                         )}
                       </div>
                       
-                      {/* Content Section */}
-                      <div className="relative bg-white/95 backdrop-blur-sm h-48 p-6 flex flex-col">
-                        {/* Company Name */}
-                        <h3 className="text-2xl font-bold font-heading text-text-primary mb-4">
+                      {/* Reduced padding on mobile p-5 -> p-4 */}
+                      <div className="relative bg-white/95 h-[calc(100%-6rem)] md:h-[calc(100%-8rem)] p-4 md:p-6 flex flex-col text-left">
+                        <h3 className="text-xl md:text-2xl font-bold font-heading text-text-primary mb-2 md:mb-3">
                           {client.name}
                         </h3>
                         
-                        {/* Content */}
-                        <p className="text-text-body font-body leading-relaxed flex-grow text-sm">
+                        <p className="text-text-body font-body text-sm leading-relaxed flex-grow overflow-y-auto scrollbar-hide">
                           {client.content}
                         </p>
                         
-                        {/* Bottom accent */}
-                        <div className="mt-4 flex items-center space-x-2">
-                          <div className="w-12 h-1 bg-primary/60 rounded-full"></div>
-                          <Star size={14} className="text-primary" />
+                        <div className="mt-2 flex items-center space-x-2 pt-2 border-t border-gray-100">
+                          <div className="w-8 md:w-12 h-1 bg-primary/60 rounded-full"></div>
+                          <Star size={12} className="text-primary" />
                         </div>
                       </div>
                       
-                      {/* Film grain overlay */}
-                      <div className="absolute inset-0 opacity-5 bg-noise"></div>
+                      <div className="absolute inset-0 opacity-5 bg-noise pointer-events-none"></div>
                     </div>
                   </div>
                 );
@@ -182,53 +168,41 @@ export default function CinematicSpotlightCarousel() {
             </div>
           </div>
 
-          {/* Dots Navigation */}
-          <div className="flex justify-center mt-12 space-x-3">
+          <div className="flex justify-center mt-4 md:mt-12 space-x-3">
             {clientsData.clients.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex 
-                    ? 'bg-primary scale-125 ring-2 ring-primary/30' 
+                    ? 'bg-primary scale-125 ring-2 ring-primary/30 w-4 md:w-6' 
                     : 'bg-primary/30 hover:bg-primary/60'
                 }`}
               />
             ))}
           </div>
         </div>
-
-        {/* Auto-play Control */}
-        {/* <div className="text-center mt-8">
-          <button
-            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="px-6 py-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 text-text-primary font-medium"
-          >
-            {isAutoPlaying ? 'Pause Spotlight' : 'Resume Spotlight'}
-          </button>
-        </div> */}
       </div>
 
       <style jsx>{`
-        @keyframes marquee {
-          0% { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
         }
-        
-        .animate-marquee {
-          animation: marquee 30s linear infinite;
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
-        
-        .bg-gradient-radial {
-          background: radial-gradient(circle, var(--tw-gradient-stops));
+        .perspective-1000 { perspective: 1000px; }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-5px); }
         }
-        
+        .animate-float { animation: float 3s ease-in-out infinite; }
         .bg-noise {
           background-image: 
-            radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 1px, transparent 1px),
-            radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
-            radial-gradient(circle at 40% 40%, rgba(255,255,255,0.1) 1px, transparent 1px);
-          background-size: 100px 100px, 80px 80px, 120px 120px;
+            radial-gradient(circle at 20% 80%, rgba(0,0,0,0.1) 1px, transparent 1px),
+            radial-gradient(circle at 80% 20%, rgba(0,0,0,0.1) 1px, transparent 1px);
+          background-size: 80px 80px;
         }
       `}</style>
     </section>

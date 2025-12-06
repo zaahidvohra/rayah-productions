@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function FinalCta() {
   return (
-    <section className="py-20 mt-14 bg-white">
+    <section className="py-16 mt-14 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-text-primary mb-6">
           Why Rayah?

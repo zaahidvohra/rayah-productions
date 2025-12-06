@@ -41,47 +41,64 @@ export const featuredProjects = [
   }
 ];
 
-export const mediaGallery = [
+export const socialMediaPosts = [
   {
-    type: "image",
-    src: "/api/placeholder/300/300",
-    caption: "Brand Identity Design"
+    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867127/3ad2c55d-15a2-4adf-b160-2ae384594d40_ofxpzu.jpg",
+    width: 1131,
+    height: 1600, // Square post
+    alt: "Rafinama",
+    category: "Social"
   },
   {
-    type: "carousel",
-    src: "/api/placeholder/300/300",
-    caption: "Instagram Carousel Post"
+    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867083/9e6b516c-7c09-4ba8-8583-8862989b7557_ccr2kf.jpg",
+    width: 1086,
+    height: 1080, // Square post
+    alt: "Rangtaali-24",
+    category: "Social"
   },
   {
-    type: "reel",
-    src: "/api/placeholder/300/400",
-    caption: "Product Showcase Reel"
+    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867014/photo_2025-07-02_00-04-52_f68clq.jpg",
+    width: 1086,
+    height: 1080, // Square post
+    alt: "Australia Day",
+    category: "Social"
   },
   {
-    type: "image",
-    src: "/api/placeholder/300/300",
-    caption: "Event Photography"
+    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867015/photo_2025-07-02_00-04-58_tshxt4.jpg",
+    width: 1023,
+    height: 1280, // Square post
+    alt: "Musicana-01",
+    category: "Social"
   },
   {
-    type: "image",
-    src: "/api/placeholder/600/300",
-    caption: "Campaign Visual"
+    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867016/photo_2025-07-02_00-05-01_fn4grc.jpg",
+    width: 1005,
+    height: 1280, // Square post
+    alt: "Musicana-02",
+    category: "Social"
   },
   {
-    type: "reel",
-    src: "/api/placeholder/300/400",
-    caption: "Behind the Scenes"
+    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764866992/IMG_0353_sncfar.png",
+    width: 1080,
+    height: 1350, // Square post
+    alt: "Marhabaa",
+    category: "Social"
   },
   {
-    type: "carousel",
-    src: "/api/placeholder/300/300",
-    caption: "Client Testimonial"
+    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867016/photo_2025-07-02_00-04-57_cvv4zo.jpg",
+    width: 1073,
+    height: 1233, // Square post
+    alt: "Abhivyakta-01",
+    category: "Social"
   },
   {
-    type: "image",
-    src: "/api/placeholder/300/300",
-    caption: "Logo Design"
-  }
+    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867067/IMG_5262_kalwse.jpg",
+    width: 1024,
+    height: 1024, // Square post
+    alt: "Armour",
+    category: "Social"
+  },
+  
 ];
 
 export const videoShowcase = [
@@ -126,33 +143,6 @@ export const videoShowcase = [
     thumbnail: "/api/placeholder/400/300",
     category: "Social Campaign",
     description: "Multi-platform social media campaign video"
-  }
-];
-
-export const beforeAfterData = [
-  {
-    title: "Logo Redesign",
-    description: "Complete brand identity transformation",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
-  },
-  {
-    title: "Website Makeover",
-    description: "Modern website redesign with improved UX",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
-  },
-  {
-    title: "Product Photography",
-    description: "Professional product photo enhancement",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
-  },
-  {
-    title: "Social Media Post",
-    description: "Instagram post design improvement",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
   }
 ];
 

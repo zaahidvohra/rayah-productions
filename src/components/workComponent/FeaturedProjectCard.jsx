@@ -30,7 +30,7 @@ export default function FeaturedProjectCard({ project, index }) {
       </div>
 
       {/* Content Section */}
-      <div className="lg:w-1/2 p-8 flex flex-col justify-center">
+      <div className="lg:w-1/2 p-6 flex flex-col justify-center">
         <h3 className="text-3xl font-bold text-gray-900 mb-4">{project.title}</h3>
         <p className="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
         

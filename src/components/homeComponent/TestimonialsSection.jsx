@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
 export default function TestimonialsSection({ testimonials, slideIndex, setSlideIndex }) {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">

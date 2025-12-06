@@ -50,7 +50,7 @@ const ServiceCards = () => {
 
   return (
     <div className="min-h-screen bg-white py-16 px-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-heading font-bold text-text-primary mb-4">

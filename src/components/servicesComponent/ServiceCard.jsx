@@ -4,15 +4,15 @@ import React from 'react';
 const ServiceCard = ({ service, isActive, onToggle }) => {
     return (
         <div
-            className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-2 ${isActive ? 'border-primary' : 'border-transparent'
+            className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-2 ${isActive ? 'border-primary' : 'border-transparent'
                 }`}
             onClick={onToggle}
         >
             <div className="flex items-center mb-6">
-                <div className="p-3 rounded-full mr-4 shadow-md bg-gradient-to-br from-accent-light to-accent-dark text-primary">
-                    <span className="text-2xl">{service.icon}</span>
+                <div className="p-3 rounded-full mr-4 shadow-md bg-primary/10 text-primary">
+                    <span className="text-xl">{service.icon}</span>
                 </div>
-                <h3 className="font-heading text-xl font-bold text-text-primary">
+                <h3 className="font-heading text-lg font-bold text-text-primary">
                     {service.title}
                 </h3>
             </div>
@@ -27,7 +27,7 @@ const ServiceCard = ({ service, isActive, onToggle }) => {
                     {service.skills.map((skill, index) => (
                         <span
                             key={index}
-                            className="px-3 py-1 rounded-full text-sm font-medium shadow-sm bg-gradient-to-br from-accent-light to-accent-dark text-primary"
+                            className="px-3 py-1 rounded-full text-sm font-medium shadow-sm bg-primary/10 text-primary"
                         >
                             {skill}
                         </span>

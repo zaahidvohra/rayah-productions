@@ -4,19 +4,19 @@ export default function HeroSection() {
   // const clientLogos = ["TechStart", "GrowthCorp", "Creative Solutions", "InnovateCo", "DigitalFirst"];
 
   return (
-    <section className="relative bg-gradient-to-br from-secondary via-secondary to-accent-light py-20 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-gradient-to-br from-secondary via-secondary to-accent-light py-16 overflow-hidden">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Section */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-6xl font-heading font-bold text-text-primary mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-heading font-bold text-text-primary mb-6 leading-tight">
               Turning Clicks into Connections.
               <span className="block text-primary">
                 We don’t just market brands. We narrate stories that stick.
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-text-body mb-8 max-w-3xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-base md:text-lg text-text-body mb-8 max-w-3xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed">
               At Rayah Productions, we blend strategy with soul to help your
               brand breathe, speak, and shine in the digital world.
             </p>
@@ -24,14 +24,14 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <Link
                 to="/services"
-                className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="bg-primary text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Explore Our Services
               </Link>
 
               <Link
                 to="/portfolio"
-                className="border-2 border-primary text-primary px-8 py-4 rounded-lg text-lg font-medium hover:bg-primary hover:text-white transition-all duration-200"
+                className="border-2 border-primary text-primary px-6 py-3 rounded-lg text-lg font-medium hover:bg-primary hover:text-white transition-all duration-200"
               >
                 View Our Portfolio
               </Link>

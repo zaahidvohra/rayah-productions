@@ -1,14 +1,44 @@
-@import 'react-image-lightbox/style.css';
 @tailwind base; 
 @tailwind components; 
 @tailwind utilities; 
 
 @layer components {
   .span-style {
-    @apply absolute top-0 left-0 w-full h-full origin-center [transform-style:preserve-3d] lg:[transform:rotateY(calc(var(--i)*45deg))_translateZ(350px)] md:[transform:rotateY(calc(var(--i)*45deg))_translateZ(265px)] sm:[transform:rotateY(calc(var(--i)*45deg))_translateZ(216px)] [transform:rotateY(calc(var(--i)*45deg))_translateZ(120px)];
+    @apply absolute top-0 left-0 w-full h-full origin-center [transform-style:preserve-3d];
+    
+    /* UPDATED TRANSLATE-Z VALUES:
+       lg (Desktop): 240px width -> 400px Z
+       md (Tablet):  200px width -> 320px Z
+       sm (Small):   160px width -> 260px Z
+       base (Mobile): 140px width -> 230px Z (Crucial Fix)
+    */
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(230px);
   }
+
+  /* Responsive overrides need to be separate or using standard CSS media queries within @apply sometimes gets tricky with complex transforms, 
+     but keeping your Tailwind syntax, here is the corrected scaling: */
+  
+  @media (min-width: 640px) {
+    .span-style {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(260px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .span-style {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(320px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .span-style {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    }
+  }
+
   .img-style {
-    @apply absolute top-0 left-0 w-full h-full rounded-sm object-cover [transition:2s] sm:hover:-translate-y-[50px] hover:-translate-y-[20px] hover:scale-[1.3];
+    @apply absolute top-0 left-0 w-full h-full rounded-xl object-cover transition-all duration-500 hover:-translate-y-[10px] hover:scale-110 shadow-lg;
+    /* Added rounded-xl and smoother transition */
   }
 }
 

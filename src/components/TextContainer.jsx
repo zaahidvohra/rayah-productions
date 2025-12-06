@@ -12,7 +12,7 @@ export default function TextContainer({ title, content, highlights = [], classNa
   return (
     <section className={`py-6 px-6 ${className}`}>
       <div className={`max-w-5xl mx-auto flex flex-col ${alignment}`}>
-        <h2 className="text-4xl md:text-5xl font-bold font-heading text-text-primary mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold font-heading text-text-primary mb-6">
           {title}
         </h2> 
 
@@ -24,7 +24,7 @@ export default function TextContainer({ title, content, highlights = [], classNa
 
 
         <div className={`text-lg font-body text-text-primary leading-relaxed space-y-8 ${align === 'center' ? 'text-center md:text-justify' : ''}`}>
-          <p className={`text-xl leading-relaxed ${align !== 'center' ? 'w-full' : 'max-w-4xl mx-auto'}`}>
+          <p className={`text-base leading-relaxed ${align !== 'center' ? 'w-full' : 'max-w-4xl mx-auto'}`}>
             {content}
           </p>
 

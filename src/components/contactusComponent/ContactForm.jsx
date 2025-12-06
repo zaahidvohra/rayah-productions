@@ -1,6 +1,7 @@
 // src/components/ContactForm.jsx
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { Send } from 'lucide-react';
 
 const ContactForm = ({ formConfig }) => {
     const [formData, setFormData] = useState({
@@ -89,14 +90,17 @@ const ContactForm = ({ formConfig }) => {
         <div className="lg:sticky lg:top-8">
             <div className="bg-white rounded-3xl shadow-2xl border border-accent-light/30 overflow-hidden">
                 {/* Form Header */}
-                <div className="bg-gradient-to-r from-primary to-accent-dark p-8 text-white">
+                <div className="bg-primary p-8 text-white">
                     <div className="flex items-center gap-4 mb-4">
                         <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                            <span className="text-3xl">📤</span>
+                            {formConfig.icon && (() => {
+                                const IconComponent = formConfig.icon;
+                                return <IconComponent className="w-7 h-7 text-white" />;
+                            })()}
                         </div>
                         <div>
                             <h3 className="font-heading text-2xl font-bold">{formConfig.title}</h3>
-                            <p className="font-body text-accent-light/90">{formConfig.subtitle}</p>
+                            <p className="font-body text-white/90">{formConfig.subtitle}</p>
                         </div>
                     </div>
                 </div>
@@ -188,7 +192,7 @@ const ContactForm = ({ formConfig }) => {
                             type="button"
                             onClick={handleSubmit}
                             disabled={isSubmitting}
-                            className="w-full bg-gradient-to-r from-primary to-accent-dark text-white py-4 rounded-xl font-heading font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                            className="w-full bg-primary text-white py-4 rounded-xl font-heading font-semibold text-lg hover:bg-primary/90 hover:shadow-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-3"
                         >
                             {isSubmitting ? (
                                 <>
@@ -198,7 +202,7 @@ const ContactForm = ({ formConfig }) => {
                             ) : (
                                 <>
                                     Send Message
-                                    <span className="text-lg">📤</span>
+                                    <Send className="w-5 h-5" />
                                 </>
                             )}
                         </button>

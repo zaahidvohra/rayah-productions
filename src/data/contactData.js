@@ -1,4 +1,6 @@
 // src/data/contactData.js
+import { Camera, Video, Calendar, Trophy, Eye, Heart, CameraIcon, Mail, Phone, MapPin, Instagram, Youtube, Linkedin, Send } from 'lucide-react';
+
 export const contactData = {
     hero: {
         title: "Let's Create Visual",
@@ -16,56 +18,66 @@ export const contactData = {
 
     services: [
         {
-            icon: '📷',
+            icon: Camera,
             title: 'Portrait Photography',
-            desc: 'Capturing the essence of personality through professional portrait sessions',
-            color: 'from-primary to-amber-600'
+            desc: 'Capturing the essence of personality through professional portrait sessions'
         },
         {
-            icon: '🎥',
+            icon: Video,
             title: 'Cinematic Videography',
-            desc: 'Creating film-quality narratives that tell your story with artistic vision',
-            color: 'from-accent-dark to-primary'
+            desc: 'Creating film-quality narratives that tell your story with artistic vision'
         },
         {
-            icon: '📅',
+            icon: Calendar,
             title: 'Event Coverage',
-            desc: 'Documenting your special moments with discretion and creative flair',
-            color: 'from-primary to-rose-600'
+            desc: 'Documenting your special moments with discretion and creative flair'
         },
         {
-            icon: '🏆',
+            icon: Trophy,
             title: 'Commercial Production',
-            desc: 'Elevating brands through compelling visual content and marketing materials',
-            color: 'from-accent-dark to-orange-600'
+            desc: 'Elevating brands through compelling visual content and marketing materials'
         }
     ],
 
     stats: [
-        { number: '500+', label: 'Projects Completed', icon: '👁️' },
-        { number: '50+', label: 'Happy Clients', icon: '❤️' },
-        { number: '8+', label: 'Years Experience', icon: '📸' }
+        { number: '500+', label: 'Projects Completed', icon: Eye },
+        { number: '50+', label: 'Happy Clients', icon: Heart },
+        { number: '8+', label: 'Years Experience', icon: CameraIcon }
     ],
 
     contactInfo: {
         email: 'amit@gmail.com',
         phone: '+1 (555) 123-4567',
         location: 'Vadodara, Gujarat',
+        contactMethods: [
+            {
+                icon: Mail,
+                label: 'Email',
+                value: 'amit@gmail.com'
+            },
+            {
+                icon: Phone,
+                label: 'Phone',
+                value: '+1 (555) 123-4567'
+            },
+            {
+                icon: MapPin,
+                label: 'Location',
+                value: 'Vadodara, Gujarat'
+            }
+        ],
         socialLinks: [
             {
                 url: 'https://www.instagram.com/moin_2896/',
-                icon: '📷',
-                color: 'from-pink-500 to-purple-500'
+                icon: Instagram
             },
             {
                 url: 'https://www.youtube.com/channel/UCkWn6vJ34Cs05YyYaU_CAaA',
-                icon: '🎥',
-                color: 'from-red-500 to-red-600'
+                icon: Youtube
             },
             {
-                url: 'https://www.youtube.com/channel/UCkWn6vJ34Cs05YyYaU_CAaA',
-                icon: '💼',
-                color: 'from-blue-500 to-blue-600'
+                url: 'https://www.linkedin.com/in/moin-vahora-2ba727120',
+                icon: Linkedin
             }
         ]
     },
@@ -73,6 +85,7 @@ export const contactData = {
     form: {
         title: "Start Your Project",
         subtitle: "Let's discuss your vision",
+        icon: Send,
         services: [
             'Portrait Photography',
             'Cinematic Videography',

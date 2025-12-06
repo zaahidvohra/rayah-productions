@@ -2,8 +2,8 @@ import { BarChart3 } from "lucide-react";
  
 export default function PortfolioSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-text-primary mb-6">
             Our Proven Results
@@ -15,7 +15,7 @@ export default function PortfolioSection() {
         
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="md:flex">
-            <div className="md:w-1/2 p-8 lg:p-12">
+            <div className="md:w-1/2 p-6 lg:p-8">
               <div className="bg-primary text-white px-4 py-2 rounded-lg inline-block text-sm font-medium mb-4">
                 Case Study
               </div>
@@ -43,7 +43,7 @@ export default function PortfolioSection() {
                 Read Full Case Study
               </button> */}
             </div>
-            <div className="md:w-1/2 bg-gradient-to-br from-accent-light to-accent-dark p-8 lg:p-12 flex items-center justify-center">
+            <div className="md:w-1/2 bg-gradient-to-br from-accent-light to-accent-dark p-6 lg:p-8 flex items-center justify-center">
               <div className="text-center">
                 <div className="bg-white rounded-2xl p-8 shadow-xl">
                   <BarChart3 size={80} className="text-primary mx-auto mb-4" />
