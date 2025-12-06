@@ -16,8 +16,7 @@ export default function ImageCarousal3d() {
   return (
     // REMOVED 'ml-4' to fix centering
     // ADDED 'perspective-[1000px]' for better 3D depth perception
-    <div className="h-96 w-full flex items-center justify-center overflow-hidden bg-secondary perspective-[1000px]">
-      
+<div className="h-96 md:h-[500px] lg:h-[600px] w-full flex items-center justify-center overflow-hidden bg-secondary perspective-[1000px]">      
       {/* INCREASED SIZES:
           Mobile: w-[140px] h-[140px] (was 80px) -> Much bigger
           Sm: w-[160px] h-[160px]
