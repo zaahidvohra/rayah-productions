@@ -73,7 +73,7 @@
                 className="text-text-primary hover:text-primary transition-colors duration-300 p-2 rounded-lg hover:bg-accent-light/30"
               >
                 <svg
-                  className={`w-6 h-6 transform transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45' : ''}`}
+                  className={`w-6 h-6 transform transition-transform duration-300`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -117,13 +117,13 @@
                   {link.name}
                 </Link>
               ))}
-              <Link
+              {/* <Link
                 to="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block text-center bg-gradient-to-r from-primary to-accent-dark text-white px-4 py-3 rounded-lg font-medium font-body mt-4 hover:shadow-lg transition-all duration-300"
               >
                 Get Started
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
