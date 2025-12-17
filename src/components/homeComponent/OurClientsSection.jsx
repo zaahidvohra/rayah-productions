@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, Trophy, Users, Zap } from 'lucide-react';
+import gujaratTourismLogo from '../../assets/GT.jpeg';
+import aussizzGroupLogo from '../../assets/Aussizz.jpeg';
+import victoryGroupLogo from '../../assets/VictoryGroup.jpeg';
+import musicanaAppLogo from '../../assets/Musicana.jpeg';
 
 export default function CinematicSpotlightCarousel() {
   const clientsData = {
@@ -8,31 +12,35 @@ export default function CinematicSpotlightCarousel() {
     clients: [
       {
         name: "Victory Group",
-        logo: "🏆",
+        logo: victoryGroupLogo,
         content: "Created thumb-stopping social content. Increased community interactions by 60% with trend-led reels and consistent storytelling.",
         icon: Trophy,
-        color: "from-amber-400 to-orange-500"
+        // Dark Navy to Royal Blue (Matches the outer ring of the seal)
+        color: "from-[#0b2341] to-[#1d4e89]" 
       },
       {
         name: "Aussizz Group",
-        logo: "🎯",
+        logo: aussizzGroupLogo,
         content: "Drove leads with smart content calendars, targeted campaigns, and creator collaborations that hit the mark.",
         icon: Zap,
-        color: "from-blue-400 to-purple-500"
+        // Corporate Blue (Matches the 'AUSSIZZ' text, makes the Red Kangaroo pop)
+        color: "from-[#00539f] to-[#4facfe]"
       },
       {
         name: "Musicana App",
-        logo: "🎵",
+        logo: musicanaAppLogo,
         content: "Crafted digital identity with powerful narratives. Turned a new app into a growing brand story.",
         icon: Star,
-        color: "from-pink-400 to-red-500"
+        // Cinematic Red (Matches the Musicana 'M' logo)
+        color: "from-[#d60000] to-[#8a0000]"
       },
       {
         name: "Gujarat Tourism",
-        logo: "🏛️",
+        logo: gujaratTourismLogo,
         content: "Brought festivals and forgotten folklore alive on screens. Executed India's top influencer meets and campaigns.",
         icon: Users,
-        color: "from-green-400 to-teal-500"
+        // Heritage Earth/Orange (Matches the Lion and the heritage vibe)
+        color: "from-[#c25e00] to-[#e68e35]"
       }
     ]
   };
@@ -135,7 +143,7 @@ export default function CinematicSpotlightCarousel() {
                     <div className={`relative w-[85vw] max-w-sm md:w-96 h-[20rem] md:h-80 rounded-2xl overflow-hidden shadow-xl backdrop-blur-sm border border-white/20 bg-white ${isActive ? 'ring-2 md:ring-4 ring-primary/30' : ''}`}>
                       
                       <div className={`relative w-full h-24 md:h-32 bg-gradient-to-br ${client.color} opacity-90 flex items-center justify-center`}>
-                        <div className="text-5xl md:text-6xl animate-float">{client.logo}</div>
+                        <img className="w-full h-full object-contain drop-shadow-md" src={client.logo} alt={client.name} />
                         <div className="absolute top-4 right-4 p-2 rounded-full bg-white/20 backdrop-blur-sm">
                           <IconComponent size={18} className="text-white" />
                         </div>

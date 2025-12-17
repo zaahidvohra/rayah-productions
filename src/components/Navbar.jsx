@@ -6,7 +6,7 @@
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-      <nav className="bg-white shadow-md sticky top-0 z-50 backdrop-blur-sm border-b border-primary/10">
+      <nav className="bg-gradient-to-r from-secondary to-accent-light shadow-lg sticky top-0 z-50 backdrop-blur-sm border-b border-accent-light/30">
         <div className="max-w-6xl mx-auto px-6 py-3">
           <div className="flex justify-between items-center">
             {/* Logo Section - Left Side */}
@@ -49,8 +49,8 @@
                   className="relative px-4 py-2 text-text-primary font-medium font-body transition-all duration-300 hover:text-primary group"
                 >
                   <span className="relative z-10">{link.name}</span>
-                  <div className="absolute inset-0 bg-primary/5 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 opacity-0 group-hover:opacity-100"></div>
-                  <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent-light to-white rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 opacity-0 group-hover:opacity-100"></div>
+                  <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-accent-dark transition-all duration-300 group-hover:w-full group-hover:left-0"></div>
                 </Link>
               ))}
               
@@ -70,7 +70,7 @@
             <div className="lg:hidden">
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-text-primary hover:text-primary transition-colors duration-300 p-2 rounded-lg hover:bg-primary/10"
+                className="text-text-primary hover:text-primary transition-colors duration-300 p-2 rounded-lg hover:bg-accent-light/30"
               >
                 <svg
                   className={`w-6 h-6 transform transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45' : ''}`}
@@ -112,7 +112,7 @@
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-4 py-3 text-text-primary font-medium font-body rounded-lg hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                  className="block px-4 py-3 text-text-primary font-medium font-body rounded-lg hover:bg-gradient-to-r hover:from-accent-light hover:to-white hover:text-primary transition-all duration-300"
                 >
                   {link.name}
                 </Link>

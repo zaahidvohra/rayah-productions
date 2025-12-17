@@ -8,7 +8,7 @@ const ServiceCards = () => {
       id: 1,
       name: 'Video Production',
       icon: <Video className="w-8 h-8" />,
-      description: 'From corporate films to drone shots, our lenses find the moment that matters. We direct, shoot, and edit videos that not only inform - but to captivate attention.',
+      description: 'Our lenses find the moment that matters. We direct, shoot, and edit videos that not only inform - but to captivate attention.',
       features: ['Corporate Videos', 'Commercial Shoots', 'Event Coverage', 'Drone Footage']
     },
     {
@@ -66,10 +66,10 @@ const ServiceCards = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="group relative h-64 w-full"
+              className="group relative h-64 w-full cursor-pointer" // Added cursor-pointer to hint it's clickable
               style={{ perspective: '1000px' }}
             >
-              {/* Card Container */}
+              {/* Card Container - RESTORED ORIGINAL CSS HOVER */}
               <div className="relative w-full h-full transition-transform duration-700 group-hover:[transform:rotateY(180deg)]" style={{ transformStyle: 'preserve-3d' }}>
 
                 {/* Front of Card */}
@@ -83,8 +83,13 @@ const ServiceCards = () => {
                   <h3 className="text-xl font-heading font-semibold text-text-primary mb-2">
                     {service.name}
                   </h3>
+                  
+                  {/* FIX IS HERE: Conditional Text based on screen size */}
                   <p className="text-sm text-text-body/70 font-body">
-                    Hover to learn more
+                    {/* Shows on Desktop */}
+                    <span className="hidden lg:block">Hover to learn more</span>
+                    {/* Shows on Mobile/Tablets */}
+                    <span className="lg:hidden">Tap to learn more</span>
                   </p>
                 </div>
 
@@ -119,9 +124,6 @@ const ServiceCards = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          {/* <button className="bg-primary hover:bg-accent-dark text-secondary font-heading font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-            Get Started Today
-          </button> */}
           <Link to="/contact" className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg">
             Get Started Today
           </Link>
