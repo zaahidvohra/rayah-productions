@@ -6,7 +6,7 @@
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-      <nav className="bg-gradient-to-r from-secondary to-accent-light shadow-lg sticky top-0 z-50 backdrop-blur-sm border-b border-accent-light/30">
+      <nav className="bg-gradient-to-r from-secondary to-secondary shadow-lg sticky top-0 z-50 backdrop-blur-sm border-b border-accent-light/60">
         <div className="max-w-6xl mx-auto px-6 py-3">
           <div className="flex justify-between items-center">
             {/* Logo Section - Left Side */}
