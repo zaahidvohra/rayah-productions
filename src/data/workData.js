@@ -98,6 +98,20 @@ export const socialMediaPosts = [
     alt: "Armour",
     category: "Social"
   },
+  {
+    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1766000197/6baf24fb-fa41-4907-83ba-228d8c635a42_sl7mlp.jpg",
+    width: 1080,
+    height: 1080, // Square post
+    alt: "Aussizz",
+    category: "Social"
+  },
+  {
+    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1766000352/IMG_3533_rz725y.png",
+    width: 1080,
+    height: 1350, // Square post
+    alt: "Bulleshah",
+    category: "Social"
+  },
   
 ];
 
