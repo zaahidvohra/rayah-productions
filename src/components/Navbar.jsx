@@ -49,7 +49,7 @@
                   className="relative px-4 py-2 text-text-primary font-medium font-body transition-all duration-300 hover:text-primary group"
                 >
                   <span className="relative z-10">{link.name}</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent-light to-white rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 opacity-0 group-hover:opacity-100"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent-light to-accent-light rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 opacity-0 group-hover:opacity-100"></div>
                   <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-accent-dark transition-all duration-300 group-hover:w-full group-hover:left-0"></div>
                 </Link>
               ))}
