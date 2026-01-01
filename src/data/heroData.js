@@ -18,5 +18,10 @@ export const heroImages = [
     url: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767264470/VideoEditing_tyqnpv.jpg",
     title: "Video Editing",
     description: "Elevating your brand through compelling visual content"
+  },
+  {
+    url: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767282386/Branding_ktn84j.jpg",
+    title: "Branding",
+    description: "Crafting unique visual identities that tell your story and resonate with your audience."
   }
 ]
