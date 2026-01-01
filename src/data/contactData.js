@@ -47,7 +47,7 @@ export const contactData = {
 
     contactInfo: {
         email: 'inqrayahmedia@gmail.com',
-        phone: '+91 9173370684',
+        phone: '+91 9316421785',
         location: 'Vadodara, Gujarat',
         contactMethods: [
             {
@@ -58,7 +58,7 @@ export const contactData = {
             {
                 icon: Phone,
                 label: 'Phone',
-                value: '+91 9173370684'
+                value: '+91 9316421785'
             },
             {
                 icon: MapPin,

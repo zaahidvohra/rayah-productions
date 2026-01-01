@@ -2,93 +2,93 @@
 export const servicesData = [
     {
         id: 1,
-        title: "Cinematic Videography",
-        icon: "🎥",
-        description: "Professional video production with cinematic storytelling that captivates audiences.",
-        skills: ["Adobe Premiere Pro", "After Effects", "Video Editing", "Video Post-Production", "Documentaries"],
+        title: "Event Coverage",
+        icon: "📹",
+        description: "Capturing the energy and key moments of your events with cinematic precision.",
+        skills: ["Live Videography", "Event Photography", "Highlight Reels", "On-location Editing"],
         features: [
-            "4K Cinematic Production",
-            "Advanced Color Grading",
-            "Professional Audio Mixing",
-            "Multi-camera Setup",
-            "Drone Cinematography"
+            "Corporate Events & Conferences",
+            "Weddings & Celebrations",
+            "Live Streaming Setup",
+            "Same-day Highlight Edits",
+            "Multi-camera Coverage"
         ],
-        price: "Starting from 2,500 ₹"
+        price: "Starting from 5,000 ₹"
     },
     {
         id: 2,
-        title: "Motion Graphics & Animation",
-        icon: "⚡",
-        description: "Eye-catching motion graphics and animations that bring your brand to life.",
-        skills: ["Motion Graphics", "After Effects", "Creative Concept Design", "Brand Development"],
+        title: "Social Media Marketing",
+        icon: "📱",
+        description: "Strategic content planning and management to grow your digital community.",
+        skills: ["Content Strategy", "Community Management", "Analytics", "Trend Analysis"],
         features: [
-            "2D/3D Animations",
-            "Logo Animations",
-            "Kinetic Typography",
-            "Visual Effects",
-            "Brand Motion Identity"
-        ],
-        price: "Starting from 8000 ₹"
-    },
-    {
-        id: 3,
-        title: "Social Media Optimization",
-        icon: "📈",
-        description: "Strategic social media management and optimization to maximize your digital presence.",
-        skills: ["Social Media Marketing", "Social Media Optimization (SMO)", "Content Strategy", "Community Engagement"],
-        features: [
-            "Platform-specific Content",
-            "Hashtag Strategy",
-            "Audience Analytics",
-            "Engagement Optimization",
-            "Growth Strategy"
+            "Platform-specific Strategy (IG, LinkedIn, etc.)",
+            "Content Calendar Creation",
+            "Hashtag & Keyword Research",
+            "Engagement Monitoring",
+            "Monthly Performance Reports"
         ],
         price: "Starting from 1,200 ₹/month"
     },
     {
-        id: 4,
-        title: "Brand Development & Strategy",
-        icon: "🎯",
-        description: "Comprehensive brand development with strategic creative direction.",
-        skills: ["Brand Development", "Brand Awareness", "Creative Direction", "Creative Strategy"],
+        id: 3,
+        title: "Branding",
+        icon: "✨",
+        description: "Building a cohesive visual identity that tells your unique story.",
+        skills: ["Logo Design", "Visual Identity", "Brand Strategy", "Typography"],
         features: [
-            "Brand Identity Design",
-            "Brand Guidelines",
-            "Market Positioning",
-            "Visual Identity System",
-            "Brand Messaging"
+            "Logo Design & Variations",
+            "Brand Style Guides",
+            "Color Palette Development",
+            "Typography Selection",
+            "Brand Voice & Messaging"
         ],
         price: "Starting from 3,000 ₹"
     },
     {
-        id: 5,
-        title: "Content Creation & Campaigns",
-        icon: "✂️",
-        description: "Engaging content creation and campaign management for maximum impact.",
-        skills: ["Engaging Content", "Campaigns", "Communication", "Skilled Multi-tasker"],
+        id: 4,
+        title: "Video Production",
+        icon: "🎥",
+        description: "High-end video production for commercials, products, and storytelling.",
+        skills: ["Scriptwriting", "Directing", "4K Editing", "Color Grading"],
         features: [
-            "Content Calendar Planning",
-            "Multi-platform Content",
-            "Campaign Strategy",
-            "Performance Tracking",
-            "Creative Copywriting"
+            "Commercial Ad Films",
+            "Product Showcases",
+            "Corporate Interviews",
+            "Drone Cinematography",
+            "Professional Audio Mixing"
         ],
-        price: "Starting from 1,500 ₹"
+        price: "Starting from 2,500 ₹"
+    },
+    {
+        id: 5,
+        title: "SEO (Search Engine Optimization)",
+        icon: "🚀",
+        description: "Optimizing your online presence to rank higher and drive organic traffic.",
+        skills: ["Keyword Research", "On-Page SEO", "Technical SEO", "Content Optimization"],
+        features: [
+            "Website SEO Audit",
+            "Competitor Analysis",
+            "Keyword Strategy",
+            "Meta Tag Optimization",
+            "Google My Business Setup"
+        ],
+        price: "Starting from 2,000 ₹"
     },
     {
         id: 6,
-        title: "Video Marketing Solutions",
-        icon: "▶️",
-        description: "Complete video marketing solutions from concept to distribution.",
-        skills: ["Video", "Editing", "Social Media", "Creative Concept Design"],
+        title: "Influencer Collaboration",
+        icon: "🤝",
+        description: "Connecting your brand with the right voices to amplify your reach.",
+        skills: ["Networking", "Campaign Management", "Negotiation", "ROI Analysis"],
         features: [
-            "Promotional Videos",
-            "Product Demos",
-            "Testimonial Videos",
-            "Social Media Clips",
-            "YouTube Optimization"
+            "Influencer Research & Matching",
+            "Outreach & Negotiation",
+            "Campaign Strategy",
+            "Content Review",
+            "Performance Tracking"
         ],
-        price: "Starting from 1,800 ₹"
+        price: "Starting from 1,500 ₹"
     }
 ];
 

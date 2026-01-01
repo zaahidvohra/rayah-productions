@@ -21,7 +21,7 @@ export default function FinalCta() {
           </Link>
           <div className="flex items-center text-text-primary">
             <Phone size={20} className="mr-2" />
-            <span>or Call us at +91 9173370684</span>
+            <span>or Call us at +91 9316421785</span>
           </div>
         </div>
       </div>

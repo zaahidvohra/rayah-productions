@@ -37,13 +37,13 @@ export default function PortfolioSection() {
               {/* The 3 Big Stats */}
               <div className="grid grid-cols-3 gap-6 border-t border-gray-100 pt-8">
                 <div>
-                  <div className="text-3xl font-bold text-primary mb-1">287K+</div>
+                  <div className="text-3xl font-bold text-primary mb-1">865K+</div>
                   <div className="text-sm text-text-body font-medium flex items-center gap-1">
                     <Eye size={14} /> Total Views
                   </div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary mb-1">66K+</div>
+                  <div className="text-3xl font-bold text-primary mb-1">66.2K+</div>
                   <div className="text-sm text-text-body font-medium flex items-center gap-1">
                     <Users size={14} /> Accounts Reached
                   </div>
@@ -90,7 +90,7 @@ export default function PortfolioSection() {
                       <circle cx="80" cy="80" r="70" stroke="currentColor" strokeWidth="12" fill="none" strokeDasharray="440" strokeDashoffset="100" className="text-primary" />
                     </svg>
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
-                      <span className="text-3xl font-bold text-gray-900">287K</span>
+                      <span className="text-3xl font-bold text-gray-900">865K</span>
                       <span className="text-xs text-gray-500 uppercase tracking-wide">Views</span>
                     </div>
                   </div>
@@ -109,7 +109,7 @@ export default function PortfolioSection() {
                       <div className="text-sm font-bold text-gray-900">Visa Strategy Reel</div>
                       <div className="text-xs text-gray-500">25 Jun • Reels</div>
                     </div>
-                    <div className="text-sm font-bold text-primary">61K</div>
+                    <div className="text-sm font-bold text-primary">264K</div>
                   </div>
 
                    {/* Content Item 2 */}
@@ -121,7 +121,7 @@ export default function PortfolioSection() {
                       <div className="text-sm font-bold text-gray-900">Partner Visa Tips</div>
                       <div className="text-xs text-gray-500">18 Apr • Reels</div>
                     </div>
-                    <div className="text-sm font-bold text-primary">6K</div>
+                    <div className="text-sm font-bold text-primary">83K</div>
                   </div>
 
                 </div>

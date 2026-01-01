@@ -11,34 +11,34 @@ export default function CampaignCard() {
   // Data derived directly from your uploaded Instagram Insights
   const campaigns = [
     {
+      title: "Musicana App",
+      category: "Entertainment & Events",
+      description: "Amplified live event coverage and artist performances to build a highly engaged community of music lovers.",
+      image: 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259359/Musicana_q7kvne.jpg',
+      reach: "124K", // Actual Data
+      views: "1.3M", // Actual Data
+      outcome: "Community Engagement",
+      topContent: ["Live Concert", "Artist Spotlight", "Stage Performance"]
+    },
+    {
       title: "Aussizz Group",
       category: "Immigration & Education",
       description: "Implemented a Reel-first strategy focusing on visa updates and educational content, resulting in massive viral reach.",
       image: 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259353/Aussizz_qyv6es.jpg',
       reach: "66.2K", // Actual Data
-      views: "287K", // Actual Data
+      views: "865K", // Actual Data
       outcome: "Viral Growth Achieved",
       topContent: ["Visa Strategy Reel", "Visa Refused Guide", "Partner Visa Tips"] 
     },
     {
-      title: "Konze Enterprise",
-      category: "Fintech & Innovation",
-      description: "Drove brand awareness for 'Konpare' and social responsibility initiatives through targeted creative campaigns.",
-      image: 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259355/konze_mxubr6.jpg',
+      title: "Victory Group Australia",
+      category: "Immigration & Education",
+      description: "Drove brand awareness for social responsibility initiatives through targeted creative campaigns.",
+      image: 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259361/VictoryGroup_kyclxv.png',
       reach: "96.2K", // Actual Data
       views: "284K", // Actual Data
       outcome: "High Brand Visibility",
       topContent: ["World Env. Day", "Time is Money", "Condolence Post"]
-    },
-    {
-      title: "Musicana App",
-      category: "Entertainment & Events",
-      description: "Amplified live event coverage and artist performances to build a highly engaged community of music lovers.",
-      image: 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259359/Musicana_q7kvne.jpg',
-      reach: "31K", // Actual Data
-      views: "130K", // Actual Data
-      outcome: "Community Engagement",
-      topContent: ["Live Concert", "Artist Spotlight", "Stage Performance"]
     }
   ];
 

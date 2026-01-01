@@ -16,7 +16,7 @@ export const whatWeDoData = {
 
 export const ourWorkData = {
   title: "Our Work",
-  brief: "A glimpse into our creative journey",
+  brief: "A glimpse of our creative journey",
   description: "Each project we undertake is a testament to our commitment to excellence. Our portfolio showcases a diverse range of work, from heartwarming wedding videos that capture the essence of love, to dynamic corporate content that drives business growth. We pride ourselves on delivering visually stunning content that not only meets but exceeds our clients' expectations.",
   stats: [
     { number: "500+", label: "Projects Completed" },

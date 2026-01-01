@@ -110,7 +110,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <span className="text-text-primary/80 font-body hover:text-primary transition-colors duration-300">
-                  +91 9173370684
+                  +91 9316421785
                 </span>
               </div>
             </div>

@@ -141,10 +141,10 @@ export const socialMediaPosts = [
     category: "Social"
   },
   {
-    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258279/Rafinama02_edlfzg.jpg",
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767281414/IMG_4740_mvkvmc.jpg",
     width: 1080,
     height: 1350,
-    alt: "Rafinama03",
+    alt: "Victory02",
     category: "Social"
   },
 
