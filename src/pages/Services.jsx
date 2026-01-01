@@ -65,7 +65,7 @@ const ServicesPage = () => {
       </section> */}
 
       {/* Testimonials */}
-      <section className="py-16 px-6 bg-white">
+      {/* <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <TextContainer
             title="Client Success Stories"
@@ -78,7 +78,7 @@ const ServicesPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       {/* <CTASection /> */}
