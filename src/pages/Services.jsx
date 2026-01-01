@@ -1,10 +1,10 @@
 // OptimizedServicesPage.jsx
 import React, { useState } from 'react';
-import { servicesData, testimonialsData } from '../data/ServicesData';
+import { servicesData } from '../data/ServicesData';
 import TextContainer from '../components/TextContainer';
 // import HeroSection from '../components/servicesComponent/HeroSection_s';
 import ServiceCard from '../components/servicesComponent/ServiceCard';
-import TestimonialCard from '../components/servicesComponent/TestimonialCard';
+// import TestimonialCard from '../components/servicesComponent/TestimonialCard';
 // import ProcessStep from '../components/servicesComponent/ProcessStep';
 // import CTASection from '../components/servicesComponent/CTASection';
 import { heroImages } from "../data/heroData"
