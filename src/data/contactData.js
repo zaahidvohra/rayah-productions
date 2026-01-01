@@ -87,15 +87,15 @@ export const contactData = {
         subtitle: "Let's discuss your vision",
         icon: Send,
         services: [
-            'Portrait Photography',
-            'Cinematic Videography',
-            'Event Coverage',
-            'Commercial Production'
+            "Portrait Photography",
+            "Cinematic Videography",
+            "Event Coverage",
+            "Commercial Production"
         ],
         emailConfig: {
-            serviceId: '1andonlyamit',
-            templateId: 'template_d028eih',
-            userId: 'iQ5YaXcmSbLQeghWZ'
+            serviceId: "service_sl5thib",
+            templateId: "template_6j3bit9",
+            userId: "xO5cAkV8zHYo_iHee"
         }
     }
 };

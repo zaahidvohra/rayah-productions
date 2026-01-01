@@ -3,12 +3,18 @@ import emailjs from '@emailjs/browser';
 import { Send } from 'lucide-react';
 
 const ContactForm = ({ formConfig }) => {
-    // ... (Keep your state and logic exactly the same) ...
     const [formData, setFormData] = useState({
-        name: '', email: '', phone: '', service: '', eventDate: '', message: ''
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        eventDate: '',
+        message: ''
     });
-    const [isSubmitting] = useState(false);
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    // ✅ Initialize EmailJS (already correct)
     useEffect(() => {
         if (formConfig?.emailConfig?.userId) {
             emailjs.init(formConfig.emailConfig.userId);
@@ -19,17 +25,52 @@ const ContactForm = ({ formConfig }) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    // ✅ FIXED: real submit logic (NO UI CHANGE)
     const handleSubmit = async (e) => {
-        // ... (Keep existing submit logic) ...
         e.preventDefault();
-        // (Shortened for brevity, paste your logic here)
+
+        if (isSubmitting) return; // prevent double clicks
+        setIsSubmitting(true);
+
+        try {
+            await emailjs.send(
+                formConfig.emailConfig.serviceId,
+                formConfig.emailConfig.templateId,
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    service: formData.service,
+                    eventDate: formData.eventDate,
+                    message: formData.message
+                }
+            );
+
+            // optional but safe UX
+            alert('Message sent successfully!');
+
+            // reset form (logic only)
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                service: '',
+                eventDate: '',
+                message: ''
+            });
+
+        } catch (error) {
+            console.error('EmailJS error:', error);
+            alert('Failed to send message. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
         <div className="lg:sticky lg:top-8 w-full">
-            {/* FIX: Added w-full and max-w-full to prevent leakage */}
             <div className="bg-white rounded-3xl shadow-2xl border border-accent-light/30 overflow-hidden w-full max-w-full">
-                
+
                 <div className="bg-primary p-5 md:p-8 text-white">
                     <div className="flex items-center gap-4 mb-2">
                         <div className="w-12 h-12 md:w-14 md:h-14 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm flex-shrink-0">
@@ -38,9 +79,13 @@ const ContactForm = ({ formConfig }) => {
                                 return <IconComponent className="w-6 h-6 md:w-7 md:h-7 text-white" />;
                             })()}
                         </div>
-                        <div className="min-w-0"> {/* min-w-0 fixes flex child overflow */}
-                            <h3 className="font-heading text-xl md:text-2xl font-bold truncate">{formConfig.title}</h3>
-                            <p className="font-body text-sm md:text-base text-white/90">{formConfig.subtitle}</p>
+                        <div className="min-w-0">
+                            <h3 className="font-heading text-xl md:text-2xl font-bold truncate">
+                                {formConfig.title}
+                            </h3>
+                            <p className="font-body text-sm md:text-base text-white/90">
+                                {formConfig.subtitle}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -49,7 +94,9 @@ const ContactForm = ({ formConfig }) => {
                     <div className="space-y-4 md:space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="space-y-2 w-full">
-                                <label className="font-body text-sm font-medium text-text-primary">Full Name *</label>
+                                <label className="font-body text-sm font-medium text-text-primary">
+                                    Full Name *
+                                </label>
                                 <input
                                     type="text"
                                     name="name"
@@ -60,8 +107,11 @@ const ContactForm = ({ formConfig }) => {
                                     required
                                 />
                             </div>
+
                             <div className="space-y-2 w-full">
-                                <label className="font-body text-sm font-medium text-text-primary">Email Address *</label>
+                                <label className="font-body text-sm font-medium text-text-primary">
+                                    Email Address *
+                                </label>
                                 <input
                                     type="email"
                                     name="email"
@@ -74,11 +124,11 @@ const ContactForm = ({ formConfig }) => {
                             </div>
                         </div>
 
-                        {/* ... (Rest of your inputs, keeping w-full on all inputs) ... */}
-                        
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="space-y-2 w-full">
-                                <label className="font-body text-sm font-medium text-text-primary">Phone Number</label>
+                                <label className="font-body text-sm font-medium text-text-primary">
+                                    Phone Number
+                                </label>
                                 <input
                                     type="tel"
                                     name="phone"
@@ -88,8 +138,11 @@ const ContactForm = ({ formConfig }) => {
                                     placeholder="+91 98765 43210"
                                 />
                             </div>
+
                             <div className="space-y-2 w-full">
-                                <label className="font-body text-sm font-medium text-text-primary">Service Type *</label>
+                                <label className="font-body text-sm font-medium text-text-primary">
+                                    Service Type *
+                                </label>
                                 <select
                                     name="service"
                                     value={formData.service}
@@ -99,14 +152,18 @@ const ContactForm = ({ formConfig }) => {
                                 >
                                     <option value="">Select a service</option>
                                     {formConfig.services.map((service, index) => (
-                                        <option key={index} value={service}>{service}</option>
+                                        <option key={index} value={service}>
+                                            {service}
+                                        </option>
                                     ))}
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div className="space-y-2 w-full">
-                            <label className="font-body text-sm font-medium text-text-primary">Event Date</label>
+                            <label className="font-body text-sm font-medium text-text-primary">
+                                Event Date
+                            </label>
                             <input
                                 type="date"
                                 name="eventDate"
@@ -117,7 +174,9 @@ const ContactForm = ({ formConfig }) => {
                         </div>
 
                         <div className="space-y-2 w-full">
-                            <label className="font-body text-sm font-medium text-text-primary">Project Details *</label>
+                            <label className="font-body text-sm font-medium text-text-primary">
+                                Project Details *
+                            </label>
                             <textarea
                                 name="message"
                                 value={formData.message}
@@ -129,6 +188,7 @@ const ContactForm = ({ formConfig }) => {
                             />
                         </div>
 
+                        {/* 🔒 NO UI CHANGE – button stays exactly same */}
                         <button
                             type="button"
                             onClick={handleSubmit}
@@ -143,6 +203,7 @@ const ContactForm = ({ formConfig }) => {
                         </button>
                     </div>
                 </div>
+
             </div>
         </div>
     );
