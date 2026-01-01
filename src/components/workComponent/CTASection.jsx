@@ -16,7 +16,7 @@ const CTASection = () => {
           <p className="text-lg text-text-body leading-relaxed mb-12">
             We are more than just a marketing agency; we are your strategic partner in 
             achieving sustainable growth. Explore our services or connect with us to 
-            discover how Rayah Productions can elevate your brand.
+            discover how Rayah Media can elevate your brand.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

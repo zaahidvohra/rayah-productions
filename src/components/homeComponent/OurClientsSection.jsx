@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, Trophy, Users, Zap } from 'lucide-react';
-import gujaratTourismLogo from '../../assets/GT.jpeg';
-import aussizzGroupLogo from '../../assets/Aussizz.jpeg';
-import victoryGroupLogo from '../../assets/VictoryGroup.jpeg';
-import musicanaAppLogo from '../../assets/Musicana.jpeg';
+// import gujaratTourismLogo from '../../assets/GT.jpeg';
+// import aussizzGroupLogo from '../../assets/Aussizz.jpeg';
+// import victoryGroupLogo from '../../assets/VictoryGroup.jpeg';
+// import musicanaAppLogo from '../../assets/Musicana.jpeg';
 
 export default function CinematicSpotlightCarousel() {
+  const gujaratTourismLogo = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259357/GT_jckc6o.png';
+  const aussizzGroupLogo = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259353/Aussizz_qyv6es.jpg';
+  const victoryGroupLogo = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259361/VictoryGroup_kyclxv.png';
+  const musicanaAppLogo = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259359/Musicana_q7kvne.jpg';
+
   const clientsData = {
     title: "Our Spotlight Clients",
     subtitle: "Brands we've brought to life with cinematic storytelling",

@@ -7,7 +7,7 @@ const ContactInfo = ({ contactInfo }) => {
       {/* FIX: Reduced gap-8 to gap-6 on mobile to stop overflow */}
       <div className="grid grid-cols-12 gap-6 md:gap-8">
         
-        <div className="col-span-12 md:col-span-6 space-y-6">
+        <div className="col-span-12 md:col-span-8 space-y-6">
           <h3 className="font-heading text-2xl font-bold text-text-primary">
             Get In Touch
           </h3>
@@ -33,9 +33,9 @@ const ContactInfo = ({ contactInfo }) => {
           </div>
         </div>
 
-        <div className="col-span-12 md:col-span-6 space-y-6">
+        <div className="col-span-12 md:col-span-4 space-y-6">
           <h3 className="font-heading text-2xl font-bold text-text-primary">
-            Follow My Work
+            Follow Us
           </h3>
           <div className="grid grid-cols-4 md:grid-cols-3 gap-4">
             {contactInfo.socialLinks.map((link, index) => {

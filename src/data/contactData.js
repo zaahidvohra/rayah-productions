@@ -46,24 +46,24 @@ export const contactData = {
     ],
 
     contactInfo: {
-        email: 'amit@gmail.com',
-        phone: '+1 (555) 123-4567',
+        email: 'inqrayahmedia@gmail.com',
+        phone: '+91 9173370684',
         location: 'Vadodara, Gujarat',
         contactMethods: [
             {
                 icon: Mail,
                 label: 'Email',
-                value: 'amit@gmail.com'
+                value: 'inqrayahmedia@gmail.com'
             },
             {
                 icon: Phone,
                 label: 'Phone',
-                value: '+1 (555) 123-4567'
+                value: '+91 9173370684'
             },
             {
                 icon: MapPin,
                 label: 'Location',
-                value: 'Vadodara, Gujarat'
+                value: 'Ahmedabad, Gujarat'
             }
         ],
         socialLinks: [

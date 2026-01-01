@@ -6,7 +6,7 @@ export const sloganData = {
 
 export const whoWeAreData = {
   title: "Who We Are?",
-  content: "Rayah Productions is a creative powerhouse dedicated to transforming your vision into stunning visual narratives. With a passion for storytelling and an eye for detail, we specialize in capturing life's most precious moments and creating compelling content that resonates with audiences. Our team combines technical expertise with artistic flair to deliver exceptional results that exceed expectations."
+  content: "Rayah Media is a creative powerhouse dedicated to transforming your vision into stunning visual narratives. With a passion for storytelling and an eye for detail, we specialize in capturing life's most precious moments and creating compelling content that resonates with audiences. Our team combines technical expertise with artistic flair to deliver exceptional results that exceed expectations."
 };
 
 export const whatWeDoData = {

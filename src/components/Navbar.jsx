@@ -26,7 +26,7 @@
               {/* Company Name */}
               <div className="flex flex-col">
                 <h1 className="text-2xl md:text-3xl font-heading font-bold bg-gradient-to-r from-primary to-accent-dark bg-clip-text text-transparent">
-                  Rayah Productions
+                  Rayah Media
                 </h1>
                 <p className="text-xs font-body text-text-primary/70 tracking-wider uppercase">
                   Digital Marketing

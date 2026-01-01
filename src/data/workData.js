@@ -43,174 +43,219 @@ export const featuredProjects = [
 
 export const socialMediaPosts = [
   {
-    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867127/3ad2c55d-15a2-4adf-b160-2ae384594d40_ofxpzu.jpg",
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767257977/Rafinama_ysevwo.jpg",
     width: 1131,
     height: 1600,
     alt: "Rafinama",
     category: "Social"
   },
   {
-    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867083/9e6b516c-7c09-4ba8-8583-8862989b7557_ccr2kf.jpg",
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767257976/Rangtali_lfj5qh.jpg",
     width: 1086,
     height: 1080,
     alt: "Rangtaali-24",
     category: "Social"
   },
   {
-    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867014/photo_2025-07-02_00-04-52_f68clq.jpg",
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767257975/AussDay_mbxy0v.jpg",
     width: 1086,
     height: 1080,
     alt: "Australia Day",
     category: "Social"
   },
   {
-    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867015/photo_2025-07-02_00-04-58_tshxt4.jpg",
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767257975/Musicana_gpzgkl.jpg",
     width: 1023,
     height: 1280,
     alt: "Musicana-01",
     category: "Social"
   },
   {
-    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867016/photo_2025-07-02_00-05-01_fn4grc.jpg",
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767257975/Musicana01_bc7o60.jpg",
     width: 1005,
     height: 1280,
     alt: "Musicana-02",
     category: "Social"
   },
   {
-    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764866992/IMG_0353_sncfar.png",
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767257976/Marhabba_nvdkcq.png",
     width: 1080,
     height: 1350,
     alt: "Marhabaa",
     category: "Social"
   },
   {
-    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867016/photo_2025-07-02_00-04-57_cvv4zo.jpg",
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258766/photo_2025-07-02_00-04-57_hyuedb.jpg",
     width: 1073,
     height: 1233,
     alt: "Abhivyakta-01",
     category: "Social"
   },
   {
-    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1764867067/IMG_5262_kalwse.jpg",
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767257975/Ankur_nqw0bq.jpg",
     width: 1024,
     height: 1024,
     alt: "Armour",
     category: "Social"
   },
   {
-    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1766000197/6baf24fb-fa41-4907-83ba-228d8c635a42_sl7mlp.jpg",
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767257975/Ausizz01_icdenq.jpg",
     width: 1080,
     height: 1080,
     alt: "Aussizz",
     category: "Social"
   },
   {
-    src: "https://res.cloudinary.com/dkptcmhug/image/upload/v1766000352/IMG_3533_rz725y.png",
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258930/IMG_3533_rz725y_farfex.png",
     width: 1080,
     height: 1350,
     alt: "Bulleshah",
+    category: "Social"
+  },
+  {
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258439/IMG_3372_11zon_ynpsry.png",
+    width: 1080,
+    height: 1350,
+    alt: "Marhabba01",
+    category: "Social"
+  },
+  {
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258438/IMG_3364_11zon_gkg96x.png",
+    width: 1080,
+    height: 1350,
+    alt: "Marhabba02",
+    category: "Social"
+  },
+  {
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258303/Rafinama03_bwa2gn.jpg",
+    width: 1080,
+    height: 1350,
+    alt: "Rafinama02",
+    category: "Social"
+  },
+  {
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258060/AurumFire_kkadyx.jpg",
+    width: 1080,
+    height: 1350,
+    alt: "AmourFire",
+    category: "Social"
+  },
+  {
+    src: "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258279/Rafinama02_edlfzg.jpg",
+    width: 1080,
+    height: 1350,
+    alt: "Rafinama03",
     category: "Social"
   },
 
 ];
 
 export const videoShowcase = [
-  // Reels (Portrait Videos)
+  // --- REELS (Portrait Videos) ---
   {
-    title: "Aishwarya - Final Reel",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154523/Aishwarya_REEL_FINAL_aqbynv.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154523/Aishwarya_REEL_FINAL_aqbynv.jpg",
+    title: "Aishwarya Majmudar - Victory Group",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179484/Aishwarya_REEL_FINAL_wgs6pp.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179484/Aishwarya_REEL_FINAL_wgs6pp.jpg",
     category: "Instagram Reel",
-    description: "Aishwarya final reel production",
+    description: "Collaboration reel with Victory Group",
+    type: "reel"
+  },
+  {
+    title: "Aishwarya Majmudar - Version 12",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179472/Aishwarya_Majmudar_Reel_Version_Version_12_yjxzdi.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179472/Aishwarya_Majmudar_Reel_Version_Version_12_yjxzdi.jpg",
+    category: "Instagram Reel",
+    description: "Creative reel variation featuring Aishwarya Majmudar",
+    type: "reel"
+  },
+  {
+    title: "Ishani Dave - Tour Highlights",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179404/Ishani_Dave_Tour_p47sz7.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179404/Ishani_Dave_Tour_p47sz7.jpg",
+    category: "Instagram Reel",
+    description: "Tour highlights and behind-the-scenes",
     type: "reel"
   },
   {
     title: "Ishani Dave - Garba Highlight 01",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154500/Ishani_Dave_Garba_Highlight_01_ohfk6q.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154500/Ishani_Dave_Garba_Highlight_01_ohfk6q.jpg",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179453/Ishani_Dave_Garba_Highlight_01_tp0bs0.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179453/Ishani_Dave_Garba_Highlight_01_tp0bs0.jpg",
     category: "Instagram Reel",
     description: "Garba celebration highlights featuring Ishani Dave",
     type: "reel"
   },
   {
+    title: "Pre Webinar Promo",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179487/Pre_Webinar_Reel_2_oaquae.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179487/Pre_Webinar_Reel_2_oaquae.jpg",
+    category: "Instagram Reel",
+    description: "Promotional reel for upcoming webinar",
+    type: "reel"
+  },
+  
+  
+  {
     title: "Ishani Dave - Garba Highlight 02",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154439/Ishani_Dave_Garba_Highlight_02_jq2yew.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154439/Ishani_Dave_Garba_Highlight_02_jq2yew.jpg",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179415/Ishani_Dave_Garba_Highlight_02_j4n5xd.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179415/Ishani_Dave_Garba_Highlight_02_j4n5xd.jpg",
     category: "Instagram Reel",
     description: "More garba moments with Ishani Dave",
     type: "reel"
   },
-  {
-    title: "Ishani Dave - Tour 1",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154434/Ishani_Dave_Tour_1_yuaaah.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154434/Ishani_Dave_Tour_1_yuaaah.jpg",
-    category: "Instagram Reel",
-    description: "Tour highlights and behind-the-scenes",
-    type: "reel"
-  },
 
-  // Videos (Landscape Videos)
+  // --- VIDEOS (Landscape Videos) ---
   {
     title: "Arts and Crafts of Kutch",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154454/Arts_and_Crafts_of_Kutch_gzdviu.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154454/Arts_and_Crafts_of_Kutch_gzdviu.jpg",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179593/Arts_and_Crafts_of_Kutch_u1a0js.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179593/Arts_and_Crafts_of_Kutch_u1a0js.jpg",
     category: "Documentary",
     description: "Documentary showcasing traditional arts and crafts of Kutch",
     type: "youtube"
   },
   {
-    title: "Honda Jass Ad - Handbrake",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154449/Honda_Jass_Ad_2405_Handbrack_vswzep.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154449/Honda_Jass_Ad_2405_Handbrack_vswzep.jpg",
+    title: "Honda Jazz Ad - Handbrake",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179552/Honda_Jass_Ad_2405_Handbrack_vfcxsq.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179552/Honda_Jass_Ad_2405_Handbrack_vfcxsq.jpg",
     category: "Advertisement",
-    description: "Honda Jass advertisement featuring handbrake action",
+    description: "Honda Jazz advertisement featuring handbrake action",
     type: "youtube"
   },
   {
     title: "Baroda Museum Trailer",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154483/Baroda_Musium_Trailer_2_mi3fcf.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154483/Baroda_Musium_Trailer_2_mi3fcf.jpg",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179597/Baroda_Musium_Trailer_2_hftt6s.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179597/Baroda_Musium_Trailer_2_hftt6s.jpg",
     category: "Documentary",
     description: "Promotional trailer for Baroda Museum",
     type: "youtube"
   },
   {
     title: "Konze LED Ads",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154464/KONZE_LED_ADS_iww9fn.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154464/KONZE_LED_ADS_iww9fn.jpg",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179607/KONZE_LED_ADS_cyduhp.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179607/KONZE_LED_ADS_cyduhp.jpg",
     category: "Advertisement",
     description: "LED advertisement campaign for Konze",
     type: "youtube"
   },
   {
     title: "BMW X Iktara - Ahmedabad",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154531/BMW_X_Iktara_Ahmedabad_2_vushth.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154531/BMW_X_Iktara_Ahmedabad_2_vushth.jpg",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179652/BMW_X_Iktara_Ahmedabad_2_gxjmb6.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179652/BMW_X_Iktara_Ahmedabad_2_gxjmb6.jpg",
     category: "Commercial",
     description: "BMW collaboration with Iktara in Ahmedabad",
     type: "youtube"
   },
   {
     title: "BMW X Iktara - Rajkot",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154531/BMW_X_Iktara_Rajkot_2_k2tgo9.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154531/BMW_X_Iktara_Rajkot_2_k2tgo9.jpg",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179670/BMW_X_Iktara_Rajkot_2_x6i2ea.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179670/BMW_X_Iktara_Rajkot_2_x6i2ea.jpg",
     category: "Commercial",
     description: "BMW collaboration with Iktara in Rajkot",
     type: "youtube"
   },
   {
-    title: "BMW X Iktara - Ahmedabad Extended",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154523/BMW_X_Iktara_Ahmedabad_2_1_gjlbi5.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154523/BMW_X_Iktara_Ahmedabad_2_1_gjlbi5.jpg",
-    category: "Commercial",
-    description: "Extended version of BMW Iktara Ahmedabad campaign",
-    type: "youtube"
-  },
-  {
     title: "Konze Promotion - Melbourne Reff",
-    url: "https://res.cloudinary.com/dvrvdkkef/video/upload/v1766154514/Konze_Promotion_By_Melbourne_Reff_03_ybotdy.mp4",
-    thumbnail: "https://res.cloudinary.com/dvrvdkkef/video/upload/so_0/v1766154514/Konze_Promotion_By_Melbourne_Reff_03_ybotdy.jpg",
+    url: "https://res.cloudinary.com/dtgjz2fdi/video/upload/v1767179686/Konze_Promotion_By_Melbourne_Reff_03_hkx5wb.mp4",
+    thumbnail: "https://res.cloudinary.com/dtgjz2fdi/video/upload/so_0/v1767179686/Konze_Promotion_By_Melbourne_Reff_03_hkx5wb.jpg",
     category: "Promotional",
     description: "Konze brand promotion by Melbourne Reff",
     type: "youtube"

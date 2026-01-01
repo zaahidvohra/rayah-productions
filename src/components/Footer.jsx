@@ -28,7 +28,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-xl font-heading font-bold bg-gradient-to-r from-primary to-text-primary bg-clip-text text-transparent">
-                  Rayah Productions
+                  Rayah Media
                 </h3>
                 <p className="text-xs text-primary/70 tracking-wider uppercase">
                   Digital Marketing
@@ -90,7 +90,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <span className="text-text-primary/80 font-body hover:text-primary transition-colors duration-300">
-                  hello@rayahproductions.com
+                  inqrayahmedia@gmail.com
                 </span>
               </div>
               <div className="flex items-center space-x-3 group">
@@ -120,7 +120,7 @@ export default function Footer() {
         {/* Social Links & Copyright */}
         <div className="border-t border-text-primary/20 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-text-primary/60 font-body text-center md:text-left">
-            &copy; {new Date().getFullYear()} Rayah Productions. All rights
+            &copy; {new Date().getFullYear()} Rayah Media. All rights
             reserved.
           </p>
 

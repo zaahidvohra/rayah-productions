@@ -32,7 +32,7 @@ const FounderSection = () => {
   
                   <div className="space-y-4">
                     <p className="text-text-body leading-relaxed">
-                      Rayah Productions was founded by Moin Vohra, a seasoned digital strategist 
+                      Rayah Media was founded by Moin Vohra, a seasoned digital strategist 
                       with a passion for helping businesses unlock their online potential. With 
                       years of experience in the digital realm, Moin envisioned a company that 
                       cuts through the noise, delivering clear, effective, and results-oriented 

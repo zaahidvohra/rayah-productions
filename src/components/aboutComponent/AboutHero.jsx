@@ -1,8 +1,9 @@
 import React from 'react';
 // import { Camera, Clapperboard } from 'lucide-react';
-import AboutFallback from '../../assets/aboutimg.jpeg';
+// import AboutFallback from '../../assets/aboutimg.jpeg';
 
 const AboutHero = () => {
+  const AboutFallback = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767264391/About_zz4rbo.jpg'
   return (
     <section className="relative py-20 md:py-32 overflow-hidden flex items-center justify-center h-[550px] md:h-[550px]">
       
@@ -37,7 +38,7 @@ const AboutHero = () => {
 
           {/* Main Heading */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-text-primary mb-6 leading-tight">
-            We Are <span className="text-primary">Rayah Productions</span>
+            We Are <span className="text-primary">Rayah Media</span>
           </h1>
 
           {/* Subtitle */}

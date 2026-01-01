@@ -3,7 +3,7 @@ import AboutFallback from '../../assets/aboutimg.jpeg';
 
 const HeroSection = ({
   imageSrc,
-  title = "We Are Rayah Productions",
+  title = "We Are Rayah Media",
   subtitle = "Visual Storytellers. Creative Strategists. Digital Partners.",
 }) => {
 

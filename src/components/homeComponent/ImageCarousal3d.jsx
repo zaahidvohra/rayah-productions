@@ -1,14 +1,15 @@
 import React from 'react';
-import img1 from '../../assets/testImages/img1.jpeg';
-import img2 from '../../assets/testImages/img2.jpeg';
-import img3 from '../../assets/testImages/img3.jpeg';
-import img4 from '../../assets/testImages/img4.jpeg';
-import img5 from '../../assets/testImages/img5.jpeg';
-import img6 from '../../assets/testImages/img6.jpeg';
-import img7 from '../../assets/testImages/img7.jpeg';
-import img8 from '../../assets/testImages/img8.jpeg';
 
 export default function ImageCarousal3d() {
+  const img1 = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258604/IMG_5248_jfpyfb.jpg';
+  const img2 = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258542/img3_yywov7.jpg';
+  const img3 = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258544/img1_ykheju.jpg';
+  const img4 = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258543/img4_wbsw9x.jpg';
+  const img5 = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258603/AurumFire_bptvtw.jpg';
+  const img6 = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258539/img9_mhnr91.jpg';
+  const img7 = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258541/img7_hmyhpe.jpg';
+  const img8 = 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767258538/img5_cqsuyn.jpg';
+
   const images = [
     img1, img2, img3, img4, img5, img6, img7, img8,
   ];

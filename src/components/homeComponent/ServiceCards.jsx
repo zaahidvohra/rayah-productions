@@ -13,7 +13,7 @@ const ServiceCards = () => {
     },
     {
       id: 2,
-      name: 'Cinematic Photography',
+      name: 'Event Photography',
       icon: <Camera className="w-8 h-8" />,
       description: 'Be it products, people, or places - our frames narrate elegance. Our photos whisper stories before the captions speak.',
       features: ['Brand Photography', 'Event Photography', 'Portrait Sessions', 'Product Photography']
@@ -34,7 +34,7 @@ const ServiceCards = () => {
     },
     {
       id: 5,
-      name: 'Social Media Optimization',
+      name: 'Search Engine Optimization',
       icon: <TrendingUp className="w-8 h-8" />,
       description: 'Timing. Hashtags. Audience behaviour. We deep dive into patterns to boost engagement and bring real, organic growth.',
       features: ['Hashtag Strategy', 'Posting Schedule', 'Audience Analysis', 'Growth Optimization']

@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
 export default function HeroSection() {
-  // const clientLogos = ["TechStart", "GrowthCorp", "Creative Solutions", "InnovateCo", "DigitalFirst"];
+  // Cloudinary Logo URL
+  const logoUrl = "https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259340/rayahLogo_oj1fvi.png";
 
   return (
     <section className="relative bg-gradient-to-br from-secondary via-secondary to-accent-light py-16 overflow-hidden">
@@ -17,7 +18,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-base md:text-lg text-text-body mb-8 max-w-3xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed">
-              At Rayah Productions, we blend strategy with soul to help your
+              At Rayah Media, we blend strategy with soul to help your
               brand breathe, speak, and shine in the digital world.
             </p>
 
@@ -36,38 +37,28 @@ export default function HeroSection() {
                 View Our Portfolio
               </Link>
             </div>
-
-            {/* <div className="text-sm text-text-body mb-4">Trusted by leading brands:</div>
-            <div className="flex flex-wrap justify-center lg:justify-start gap-8 opacity-70">
-              {clientLogos.map((logo, index) => (
-                <div key={index} className="bg-white px-6 py-3 rounded-lg shadow-md">
-                  <span className="font-medium text-text-primary">{logo}</span>
-                </div>
-              ))}
-            </div> */}
           </div>
 
           {/* Logo/Brand Section */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               {/* Main Logo Circle */}
-              <div className="w-80 h-80 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-2xl">
-                <div className="w-64 h-64 bg-white rounded-full flex items-center justify-center shadow-inner">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-primary mb-2">
-                      RAYAH
-                    </div>
-                    <div className="text-lg text-text-body font-medium">
-                      PRODUCTIONS
-                    </div>
-                    <div className="w-16 h-1 bg-primary mx-auto mt-2 rounded-full"></div>
-                  </div>
+              {/* FIX 1: Changed gradient to solid 'bg-primary' */}
+              <div className="w-80 h-80 bg-primary rounded-full flex items-center justify-center shadow-2xl p-1">
+                {/* FIX 2: Removed 'p-8' padding and 'bg-white' so the image background fits perfectly */}
+                <div className="w-full h-full bg-white rounded-full flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={logoUrl} 
+                    alt="Rayah Productions Logo" 
+                    // Used object-cover to ensure the photo background fills the circle without gaps
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
               {/* Decorative Elements */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-secondary rounded-full opacity-80 animate-pulse"></div>
-              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-accent rounded-full opacity-60 animate-pulse delay-1000"></div>
+              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-accent-light rounded-full opacity-60 animate-pulse delay-1000"></div>
               <div className="absolute top-1/2 -right-8 w-8 h-8 bg-primary rounded-full opacity-40 animate-pulse delay-500"></div>
             </div>
           </div>
@@ -76,7 +67,7 @@ export default function HeroSection() {
 
       {/* Background Decorative Elements */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-primary opacity-10 rounded-full blur-xl"></div>
-      <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent opacity-10 rounded-full blur-xl"></div>
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent-light opacity-10 rounded-full blur-xl"></div>
     </section>
   );
 };

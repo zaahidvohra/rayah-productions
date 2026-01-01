@@ -1,80 +1,121 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Eye, Users, TrendingUp, CheckCircle2 } from 'lucide-react';
 
-export default function CampaignCard({ campaigns }) {
+// --- Updated Assets Imports ---
+// import aussizzLogo from '../../assets/Aussizz.jpeg'; 
+// import musicanaLogo from '../../assets/Musicana.jpeg';
+// import konzeLogo from '../../assets/konze.jpeg'; 
+
+export default function CampaignCard() {
+  // Data derived directly from your uploaded Instagram Insights
+  const campaigns = [
+    {
+      title: "Aussizz Group",
+      category: "Immigration & Education",
+      description: "Implemented a Reel-first strategy focusing on visa updates and educational content, resulting in massive viral reach.",
+      image: 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259353/Aussizz_qyv6es.jpg',
+      reach: "66.2K", // Actual Data
+      views: "287K", // Actual Data
+      outcome: "Viral Growth Achieved",
+      topContent: ["Visa Strategy Reel", "Visa Refused Guide", "Partner Visa Tips"] 
+    },
+    {
+      title: "Konze Enterprise",
+      category: "Fintech & Innovation",
+      description: "Drove brand awareness for 'Konpare' and social responsibility initiatives through targeted creative campaigns.",
+      image: 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259355/konze_mxubr6.jpg',
+      reach: "96.2K", // Actual Data
+      views: "284K", // Actual Data
+      outcome: "High Brand Visibility",
+      topContent: ["World Env. Day", "Time is Money", "Condolence Post"]
+    },
+    {
+      title: "Musicana App",
+      category: "Entertainment & Events",
+      description: "Amplified live event coverage and artist performances to build a highly engaged community of music lovers.",
+      image: 'https://res.cloudinary.com/dtgjz2fdi/image/upload/v1767259359/Musicana_q7kvne.jpg',
+      reach: "31K", // Actual Data
+      views: "130K", // Actual Data
+      outcome: "Community Engagement",
+      topContent: ["Live Concert", "Artist Spotlight", "Stage Performance"]
+    }
+  ];
+
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {campaigns.map((campaign, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-          className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full"
         >
-          <div className="relative">
+          {/* Header Image / Brand Logo Area */}
+          <div className="relative h-48 bg-gray-50 flex items-center justify-center p-6 overflow-hidden">
+            <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors duration-300" />
+            
+            {/* Logo Image (z-10) */}
             <img
               src={campaign.image}
               alt={campaign.title}
-              className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-auto h-full max-h-32 object-contain relative z-10 drop-shadow-md transform group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-            <div className="absolute bottom-4 left-4 text-white">
-              <span className="text-sm font-medium">{campaign.category}</span>
+            
+            {/* Category Badge (FIX: Added z-20 to ensure it sits on top) */}
+            <div className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm border border-primary/10">
+              {campaign.category}
             </div>
           </div>
 
-          <div className="p-6">
-            <h3 className="text-lg font-bold text-gray-900 mb-3">{campaign.title}</h3>
-            <p className="text-gray-600 mb-4 text-sm">{campaign.description}</p>
+          <div className="p-6 flex-1 flex flex-col">
+            <h3 className="text-xl font-heading font-bold text-gray-900 mb-2">{campaign.title}</h3>
+            <p className="text-gray-600 mb-6 text-sm leading-relaxed">{campaign.description}</p>
 
-            {/* Campaign Stats */}
-            <div className="grid grid-cols-2 gap-4 mb-4">
-              <div className="text-center p-3 bg-gray-50 rounded-lg">
-                <div className="text-xl font-bold text-primary">{campaign.reach}</div>
-                <div className="text-xs text-gray-600">Reach</div>
+            {/* Key Stats Grid */}
+            <div className="grid grid-cols-2 gap-3 mb-6 mt-auto">
+              <div className="p-3 bg-secondary rounded-xl border border-accent-light/20">
+                <div className="flex items-center gap-2 mb-1 text-primary">
+                  <Users size={16} />
+                  <span className="text-xs font-semibold uppercase tracking-wide">Reach</span>
+                </div>
+                <div className="text-2xl font-bold text-gray-800">{campaign.reach}</div>
               </div>
-              <div className="text-center p-3 bg-gray-50 rounded-lg">
-                <div className="text-xl font-bold text-primary">{campaign.engagement}</div>
-                <div className="text-xs text-gray-600">Engagement</div>
+              
+              <div className="p-3 bg-secondary rounded-xl border border-accent-light/20">
+                <div className="flex items-center gap-2 mb-1 text-accent-dark">
+                  <Eye size={16} />
+                  <span className="text-xs font-semibold uppercase tracking-wide">Views</span>
+                </div>
+                <div className="text-2xl font-bold text-gray-800">{campaign.views}</div>
               </div>
             </div>
 
-            {/* Goals */}
-            <div className="mb-4">
-              <h4 className="font-semibold text-gray-800 mb-2">Campaign Goals:</h4>
+            {/* Top Content Tags */}
+            <div className="mb-6">
+              <div className="flex items-center gap-2 mb-3">
+                <TrendingUp size={14} className="text-gray-400" />
+                <span className="text-xs font-bold text-gray-500 uppercase">Top Performing Content</span>
+              </div>
               <div className="flex flex-wrap gap-2">
-                {campaign.goals.map((goal, idx) => (
+                {campaign.topContent.map((item, idx) => (
                   <span
                     key={idx}
-                    className="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                    className="px-2.5 py-1 bg-gray-50 text-gray-600 rounded-md text-[11px] font-medium border border-gray-100"
                   >
-                    {goal}
+                    {item}
                   </span>
                 ))}
               </div>
             </div>
 
-            {/* Sample Images */}
-            <div className="flex gap-2 mb-4">
-              {campaign.samples.slice(0, 3).map((sample, idx) => (
-                <img
-                  key={idx}
-                  src={sample}
-                  alt=""
-                  className="w-16 h-16 object-cover rounded-lg"
-                />
-              ))}
-              {campaign.samples.length > 3 && (
-                <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 text-xs">
-                  +{campaign.samples.length - 3}
-                </div>
-              )}
+            {/* Outcome Footer (Replaces the Button) */}
+            <div className="pt-4 border-t border-gray-100 flex items-center font-bold text-primary bg-primary/5 -mx-6 -mb-6 px-6 py-3">
+                <CheckCircle2 size={18} className="mr-2 fill-primary/20" />
+                <span className="text-sm">{campaign.outcome}</span>
             </div>
-
-            <button className="w-full py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
-              View Campaign
-            </button>
           </div>
         </motion.div>
       ))}
