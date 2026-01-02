@@ -42,30 +42,32 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-heading font-semibold text-primary">
-              Quick Links
-            </h4>
-            <div className="space-y-2">
-              {[
-                { name: "Home", path: "/" },
-                { name: "About Us", path: "/about" },
-                { name: "Services", path: "/services" },
-                { name: "Portfolio", path: "/portfolio" },
-                { name: "Contact", path: "/contact" }
-              ].map((link) => (
-                <a
-                  key={link.name}
-                  href={link.path}
-                  className="block text-text-primary/70 hover:text-primary transition-all duration-300 font-body hover:translate-x-1 relative group"
-                >
-                  {/* <span className="relative z-10">{link.name}</span> */}
-                  <div className="absolute left-0 top-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-4 -translate-y-1/2"></div>
-                  <span className="ml-0 group-hover:ml-6 transition-all duration-300">{link.name}</span>
-                </a>
-              ))}
-            </div>
-          </div>
+<div className="space-y-4">
+  <h4 className="text-lg font-heading font-semibold text-primary">
+    Quick Links
+  </h4>
+
+  <div className="space-y-2">
+    {[
+      { name: "Home", path: "/" },
+      { name: "About Us", path: "/about" },
+      { name: "Services", path: "/services" },
+      { name: "Portfolio", path: "/portfolio" },
+      { name: "Contact", path: "/contact" },
+    ].map((link) => (
+      <Link
+        key={link.name}
+        to={link.path}
+        className="block text-text-primary/70 hover:text-primary transition-all duration-300 font-body hover:translate-x-1 relative group"
+      >
+        <div className="absolute left-0 top-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-4 -translate-y-1/2"></div>
+        <span className="ml-0 group-hover:ml-6 transition-all duration-300">
+          {link.name}
+        </span>
+      </Link>
+    ))}
+  </div>
+</div>
 
           {/* Contact Info */}
           <div className="space-y-4">
